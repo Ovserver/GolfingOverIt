@@ -64,7 +64,7 @@ void Scene1::Update()
 	//메인캠 컨트롤
 	Camera::main->ControlMainCam();
 	
-	//PhysicsCenter::UpdateSpherePhysics();
+	PhysicsCenter::UpdateSpherePhysics();
 
 	//런타임에 객체는 반드시 업데이트 호출
 	grid->Update();

@@ -5,7 +5,7 @@
         <Rotation X="0" Y="0" Z="0"/>
     </Transform>
     <Children Size="17"/>
-    <Child0 Name="grass" Visible="true" ObType="0">
+    <Child0 Name="grass0" Visible="true" ObType="0">
         <Mesh File="grass.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Collider ColliderType="2" Visible="true">
@@ -21,7 +21,7 @@
         </Transform>
         <Children Size="0"/>
     </Child0>
-    <Child1 Name="grass2" Visible="true" ObType="0">
+    <Child1 Name="grass1" Visible="true" ObType="0">
         <Mesh File="grass.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Collider ColliderType="2" Visible="true">
@@ -37,7 +37,7 @@
         </Transform>
         <Children Size="0"/>
     </Child1>
-    <Child2 Name="grass3" Visible="true" ObType="0">
+    <Child2 Name="grass2" Visible="true" ObType="0">
         <Mesh File="grass.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Collider ColliderType="2" Visible="true">

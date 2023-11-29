@@ -76,6 +76,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GameObject", "GameObject", 
 		Contents\GameObject\Cam.xml = Contents\GameObject\Cam.xml
 		Contents\GameObject\CamInit.xml = Contents\GameObject\CamInit.xml
 		Contents\GameObject\CamZoom.xml = Contents\GameObject\CamZoom.xml
+		Contents\GameObject\grass.xml = Contents\GameObject\grass.xml
 		Contents\GameObject\Grid.xml = Contents\GameObject\Grid.xml
 		Contents\GameObject\handinhand.xml = Contents\GameObject\handinhand.xml
 		Contents\GameObject\Human.xml = Contents\GameObject\Human.xml
