@@ -1,0 +1,143 @@
+<Root Name="Actor" Visible="true" ObType="1">
+    <Transform>
+        <Position X="0" Y="9" Z="0"/>
+        <Scale X="1" Y="1" Z="1"/>
+        <Rotation X="0" Y="0" Z="0"/>
+    </Transform>
+    <Children Size="8"/>
+    <Child0 Name="Larm" Visible="true" ObType="0">
+        <Transform>
+            <Position X="-2" Y="2" Z="0"/>
+            <Scale X="1" Y="1" Z="1"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Transform>
+        <Children Size="1"/>
+        <Child0 Name="ob5" Visible="true" ObType="0">
+            <Mesh File="1.Sphere.mesh"/>
+            <Shader File="1.Cube.hlsl"/>
+            <Transform>
+                <Position X="0" Y="-2.8" Z="0"/>
+                <Scale X="1" Y="3.3" Z="1"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Transform>
+            <Children Size="0"/>
+        </Child0>
+    </Child0>
+    <Child1 Name="Lleg" Visible="true" ObType="0">
+        <Transform>
+            <Position X="-1" Y="-2.5999999" Z="0"/>
+            <Scale X="1" Y="1" Z="1"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Transform>
+        <Children Size="1"/>
+        <Child0 Name="ob4" Visible="true" ObType="0">
+            <Mesh File="1.Sphere.mesh"/>
+            <Shader File="1.Cube.hlsl"/>
+            <Transform>
+                <Position X="0" Y="-2.25" Z="0"/>
+                <Scale X="1" Y="4" Z="1"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Transform>
+            <Children Size="0"/>
+        </Child0>
+    </Child1>
+    <Child2 Name="Rarm" Visible="true" ObType="0">
+        <Transform>
+            <Position X="2" Y="2" Z="0"/>
+            <Scale X="1" Y="1" Z="1"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Transform>
+        <Children Size="2"/>
+        <Child0 Name="handPos" Visible="true" ObType="0">
+            <Transform>
+                <Position X="0" Y="-5" Z="0"/>
+                <Scale X="1" Y="1" Z="1"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Transform>
+            <Children Size="0"/>
+        </Child0>
+        <Child1 Name="ob3" Visible="true" ObType="0">
+            <Mesh File="1.Sphere.mesh"/>
+            <Shader File="1.Cube.hlsl"/>
+            <Transform>
+                <Position X="0" Y="-2.8" Z="0"/>
+                <Scale X="1" Y="3.3" Z="1"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Transform>
+            <Children Size="0"/>
+        </Child1>
+    </Child2>
+    <Child3 Name="Rleg" Visible="true" ObType="0">
+        <Transform>
+            <Position X="1" Y="-2.5999999" Z="0"/>
+            <Scale X="1" Y="1" Z="1"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Transform>
+        <Children Size="1"/>
+        <Child0 Name="ob2" Visible="true" ObType="0">
+            <Mesh File="1.Sphere.mesh"/>
+            <Shader File="1.Cube.hlsl"/>
+            <Transform>
+                <Position X="0" Y="-2.25" Z="0"/>
+                <Scale X="1" Y="4" Z="1"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Transform>
+            <Children Size="0"/>
+        </Child0>
+    </Child3>
+    <Child4 Name="Torso" Visible="true" ObType="0">
+        <Transform>
+            <Position X="0" Y="0" Z="0"/>
+            <Scale X="1" Y="1" Z="1"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Transform>
+        <Children Size="1"/>
+        <Child0 Name="ob0" Visible="true" ObType="0">
+            <Mesh File="1.Sphere.mesh"/>
+            <Shader File="1.Cube.hlsl"/>
+            <Transform>
+                <Position X="0" Y="0" Z="0"/>
+                <Scale X="2" Y="3.05" Z="2"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Transform>
+            <Children Size="0"/>
+        </Child0>
+    </Child4>
+    <Child5 Name="gauge" Visible="true" ObType="0">
+        <Mesh File="1.Cube.mesh"/>
+        <Shader File="0.Cube2.hlsl"/>
+        <Transform>
+            <Position X="0" Y="8.5" Z="-5"/>
+            <Scale X="0" Y="1" Z="0"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Transform>
+        <Children Size="0"/>
+    </Child5>
+    <Child6 Name="head" Visible="true" ObType="0">
+        <Transform>
+            <Position X="0" Y="3.75" Z="0"/>
+            <Scale X="1" Y="1" Z="1"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Transform>
+        <Children Size="1"/>
+        <Child0 Name="ob1" Visible="true" ObType="0">
+            <Mesh File="1.Sphere.mesh"/>
+            <Shader File="1.Cube.hlsl"/>
+            <Transform>
+                <Position X="0" Y="0" Z="0"/>
+                <Scale X="1" Y="1" Z="1"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Transform>
+            <Children Size="0"/>
+        </Child0>
+    </Child6>
+    <Child7 Name="humanCam" Visible="true" ObType="2">
+        <Transform>
+            <Position X="8.6000004" Y="0.1" Z="-19"/>
+            <Scale X="1" Y="1" Z="1"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Transform>
+        <Camera Ortho="false" Fov="1.047192" Width="1410" Height="906" NearZ="0.1" FarZ="500" viewportX="0" viewportY="0" viewportW="1410" viewportH="906"/>
+        <Children Size="0"/>
+    </Child7>
+</Root>

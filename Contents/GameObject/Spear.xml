@@ -1,0 +1,32 @@
+<Root Name="Actor" Visible="true" ObType="1">
+    <Transform>
+        <Position X="0" Y="0" Z="0"/>
+        <Scale X="1" Y="1" Z="1"/>
+        <Rotation X="0" Y="0" Z="0"/>
+    </Transform>
+    <Children Size="2"/>
+    <Child0 Name="object" Visible="true" ObType="0">
+        <Mesh File="2.Sphere.mesh"/>
+        <Shader File="2.Cube.hlsl"/>
+        <Collider ColliderType="2" Visible="true">
+            <Position X="0" Y="0" Z="0"/>
+            <Scale X="0.55000001" Y="0.55000001" Z="1"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Collider>
+        <Transform>
+            <Position X="0" Y="0" Z="0"/>
+            <Scale X="0.2" Y="0.2" Z="10"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Transform>
+        <Children Size="0"/>
+    </Child0>
+    <Child1 Name="spearCam" Visible="true" ObType="2">
+        <Transform>
+            <Position X="67.480881" Y="30.715548" Z="-1.9168854e-06"/>
+            <Scale X="1" Y="1" Z="1"/>
+            <Rotation X="0.2766332" Y="-1.5707879" Z="0"/>
+        </Transform>
+        <Camera Ortho="false" Fov="1.047192" Width="1410" Height="906" NearZ="0.1" FarZ="500" viewportX="0" viewportY="0" viewportW="1410" viewportH="906"/>
+        <Children Size="0"/>
+    </Child1>
+</Root>

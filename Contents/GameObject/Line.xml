@@ -1,0 +1,10 @@
+<Root Name="Actor" Visible="true" ObType="1">
+    <Mesh File="1.Cube2.mesh"/>
+    <Shader File="2.Cube.hlsl"/>
+    <Transform>
+        <Position X="0" Y="0" Z="2"/>
+        <Scale X="100" Y="1.55" Z="0.1"/>
+        <Rotation X="0" Y="0" Z="0"/>
+    </Transform>
+    <Children Size="0"/>
+</Root>
