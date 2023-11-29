@@ -47,7 +47,7 @@ private:
 	BrushType brushType = BrushType::Linear;
 	Vector4 paint = Vector4(1,-1,-1,-1);
 
-	Terrain* map;
+	g_Terrain* map;
 
 	Camera* cam1;
 	Grid* grid;

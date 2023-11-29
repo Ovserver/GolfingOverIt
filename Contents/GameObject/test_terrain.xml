@@ -1,0 +1,98 @@
+<Root Name="Actor" Visible="true" ObType="1">
+    <Transform>
+        <Position X="0" Y="0" Z="0"/>
+        <Scale X="1" Y="1" Z="1"/>
+        <Rotation X="0" Y="0" Z="0"/>
+    </Transform>
+    <Children Size="6"/>
+    <Child0 Name="grass0" Visible="true" ObType="0">
+        <Mesh File="2.Cube.mesh"/>
+        <Shader File="2.Cube.hlsl"/>
+        <Collider ColliderType="2" Visible="true">
+            <Position X="0" Y="0" Z="0"/>
+            <Scale X="1" Y="1" Z="1"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Collider>
+        <Transform>
+            <Position X="-1.8" Y="0.94999999" Z="-36.25"/>
+            <Scale X="37.849998" Y="0.5" Z="29.25"/>
+            <Rotation X="0.21641967" Y="0.054977581" Z="0"/>
+        </Transform>
+        <Children Size="0"/>
+    </Child0>
+    <Child1 Name="grass1" Visible="true" ObType="0">
+        <Mesh File="2.Cube.mesh"/>
+        <Shader File="2.Cube.hlsl"/>
+        <Collider ColliderType="2" Visible="true">
+            <Position X="0" Y="0" Z="0"/>
+            <Scale X="1" Y="1" Z="1"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Collider>
+        <Transform>
+            <Position X="10.4" Y="0" Z="-0.30000001"/>
+            <Scale X="8.5500002" Y="0.25" Z="8.9499998"/>
+            <Rotation X="-0.10210121" Y="-0.0069812797" Z="0.071558118"/>
+        </Transform>
+        <Children Size="0"/>
+    </Child1>
+    <Child2 Name="grass2" Visible="true" ObType="0">
+        <Mesh File="2.Cube.mesh"/>
+        <Shader File="2.Cube.hlsl"/>
+        <Collider ColliderType="2" Visible="true">
+            <Position X="0" Y="0" Z="0"/>
+            <Scale X="1" Y="1" Z="1"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Collider>
+        <Transform>
+            <Position X="-4.9499998" Y="0" Z="0"/>
+            <Scale X="8.0500002" Y="1" Z="7.9499998"/>
+            <Rotation X="0" Y="0" Z="-0.081157379"/>
+        </Transform>
+        <Children Size="0"/>
+    </Child2>
+    <Child3 Name="grass3" Visible="true" ObType="0">
+        <Mesh File="2.Cube.mesh"/>
+        <Shader File="2.Cube.hlsl"/>
+        <Collider ColliderType="2" Visible="true">
+            <Position X="0" Y="0" Z="0"/>
+            <Scale X="1" Y="1" Z="1"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Collider>
+        <Transform>
+            <Position X="-21.85" Y="0" Z="0"/>
+            <Scale X="10.65" Y="1" Z="9.25"/>
+            <Rotation X="-0.00087265996" Y="-0.016580539" Z="-0.13438962"/>
+        </Transform>
+        <Children Size="0"/>
+    </Child3>
+    <Child4 Name="grass4" Visible="true" ObType="0">
+        <Mesh File="2.Cube.mesh"/>
+        <Shader File="2.Cube.hlsl"/>
+        <Collider ColliderType="2" Visible="true">
+            <Position X="0" Y="0" Z="0"/>
+            <Scale X="1" Y="1" Z="1"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Collider>
+        <Transform>
+            <Position X="-2.8" Y="6.5" Z="-4.9499998"/>
+            <Scale X="3.95" Y="0.25" Z="3.5"/>
+            <Rotation X="0.32026622" Y="0" Z="-0.056722898"/>
+        </Transform>
+        <Children Size="0"/>
+    </Child4>
+    <Child5 Name="grass5" Visible="true" ObType="0">
+        <Mesh File="2.Cube.mesh"/>
+        <Shader File="2.Cube.hlsl"/>
+        <Collider ColliderType="2" Visible="true">
+            <Position X="0" Y="0" Z="0"/>
+            <Scale X="1" Y="1" Z="1"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Collider>
+        <Transform>
+            <Position X="-1.2" Y="0" Z="8.3999996"/>
+            <Scale X="23" Y="1" Z="16.4"/>
+            <Rotation X="-0.78364867" Y="-0.0017453199" Z="0"/>
+        </Transform>
+        <Children Size="0"/>
+    </Child5>
+</Root>

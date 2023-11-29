@@ -1,6 +1,6 @@
 #include "stdafx.h"
-#include "Animator.h"
 #include "Main.h"
+#include "PhysicsCenter.h"
 #include "Scene1.h"
 
 Main::Main()

@@ -9,7 +9,7 @@
     <ClInclude Include="Human.h">
       <Filter>GameObject</Filter>
     </ClInclude>
-    <ClInclude Include="Animator.h" />
+    <ClInclude Include="PhysicsCenter.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
@@ -19,7 +19,7 @@
     <ClCompile Include="Human.cpp">
       <Filter>GameObject</Filter>
     </ClCompile>
-    <ClCompile Include="Animator.cpp" />
+    <ClCompile Include="PhysicsCenter.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="GameObject">

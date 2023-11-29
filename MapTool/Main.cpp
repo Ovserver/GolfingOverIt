@@ -30,7 +30,7 @@ void Main::Init()
 	cam1 = Camera::Create();
 	cam1->LoadFile("Cam.xml");
 
-	map = Terrain::Create();
+	map = g_Terrain::Create();
 	map->shader = RESOURCE->shaders.Load("5.MapEditor.hlsl");
 	map->CreateStructuredBuffer();
 

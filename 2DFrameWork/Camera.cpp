@@ -5,7 +5,7 @@ ID3D11Buffer* Camera::PBuffer = nullptr;
 ID3D11Buffer* Camera::viewPosBuffer = nullptr;
 Camera* Camera::main = nullptr;
 
-float Camera::mainCamSpeed = 10.0f;
+float Camera::mainCamSpeed = 100.0f;
 
 void Camera::CreateStaticMember()
 {

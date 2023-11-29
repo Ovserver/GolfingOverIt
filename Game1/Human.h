@@ -10,7 +10,7 @@ enum class HumanState
 class Human
 {
 private:
-    Actor* actor;
+    Actor* player;
     HumanState state;
     bool plus = true;
 
