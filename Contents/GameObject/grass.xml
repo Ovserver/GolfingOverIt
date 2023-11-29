@@ -53,7 +53,7 @@
         </Transform>
         <Children Size="0"/>
     </Child2>
-    <Child3 Name="obstacle grass" Visible="true" ObType="0">
+    <Child3 Name="obstacle grass0" Visible="true" ObType="0">
         <Mesh File="obstacle grass.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Collider ColliderType="2" Visible="true">
@@ -69,7 +69,7 @@
         </Transform>
         <Children Size="0"/>
     </Child3>
-    <Child4 Name="obstacle grass2" Visible="true" ObType="0">
+    <Child4 Name="obstacle grass1" Visible="true" ObType="0">
         <Mesh File="obstacle grass.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Collider ColliderType="2" Visible="true">
@@ -85,7 +85,7 @@
         </Transform>
         <Children Size="0"/>
     </Child4>
-    <Child5 Name="obstacle grass3" Visible="true" ObType="0">
+    <Child5 Name="obstacle grass2" Visible="true" ObType="0">
         <Mesh File="obstacle grass.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Collider ColliderType="2" Visible="true">
@@ -101,7 +101,7 @@
         </Transform>
         <Children Size="0"/>
     </Child5>
-    <Child6 Name="obstacle grass4" Visible="true" ObType="0">
+    <Child6 Name="obstacle grass3" Visible="true" ObType="0">
         <Mesh File="6.Sphere.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Collider ColliderType="0" Visible="true">
@@ -117,7 +117,7 @@
         </Transform>
         <Children Size="0"/>
     </Child6>
-    <Child7 Name="obstacle grass5" Visible="true" ObType="0">
+    <Child7 Name="obstacle grass4" Visible="true" ObType="0">
         <Mesh File="6.Sphere.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Collider ColliderType="0" Visible="true">
@@ -133,7 +133,7 @@
         </Transform>
         <Children Size="0"/>
     </Child7>
-    <Child8 Name="obstacle grass6" Visible="true" ObType="0">
+    <Child8 Name="obstacle grass5" Visible="true" ObType="0">
         <Mesh File="6.Sphere.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Collider ColliderType="0" Visible="true">
@@ -149,7 +149,7 @@
         </Transform>
         <Children Size="0"/>
     </Child8>
-    <Child9 Name="obstacle grass7" Visible="true" ObType="0">
+    <Child9 Name="obstacle grass6" Visible="true" ObType="0">
         <Mesh File="6.Sphere.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Material File="obstacle grass.mtl"/>
@@ -160,7 +160,7 @@
         </Transform>
         <Children Size="0"/>
     </Child9>
-    <Child10 Name="obstacle grass8" Visible="true" ObType="0">
+    <Child10 Name="obstacle grass7" Visible="true" ObType="0">
         <Mesh File="6.Sphere.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Material File="obstacle grass.mtl"/>
@@ -171,7 +171,7 @@
         </Transform>
         <Children Size="0"/>
     </Child10>
-    <Child11 Name="snad" Visible="true" ObType="0">
+    <Child11 Name="snad0" Visible="true" ObType="0">
         <Mesh File="6.Cube.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Material File="sand.mtl"/>
@@ -182,7 +182,7 @@
         </Transform>
         <Children Size="0"/>
     </Child11>
-    <Child12 Name="snad2" Visible="true" ObType="0">
+    <Child12 Name="snad1" Visible="true" ObType="0">
         <Mesh File="6.Sphere.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Material File="sand.mtl"/>
@@ -193,7 +193,7 @@
         </Transform>
         <Children Size="0"/>
     </Child12>
-    <Child13 Name="snad3" Visible="true" ObType="0">
+    <Child13 Name="snad2" Visible="true" ObType="0">
         <Mesh File="6.Sphere.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Material File="sand.mtl"/>
@@ -204,7 +204,7 @@
         </Transform>
         <Children Size="0"/>
     </Child13>
-    <Child14 Name="snad4" Visible="true" ObType="0">
+    <Child14 Name="snad3" Visible="true" ObType="0">
         <Mesh File="6.Sphere.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Material File="sand.mtl"/>
@@ -215,7 +215,7 @@
         </Transform>
         <Children Size="0"/>
     </Child14>
-    <Child15 Name="snad5" Visible="true" ObType="0">
+    <Child15 Name="snad4" Visible="true" ObType="0">
         <Mesh File="6.Sphere.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Material File="sand.mtl"/>

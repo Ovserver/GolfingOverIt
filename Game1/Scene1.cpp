@@ -63,8 +63,20 @@ void Scene1::Update()
 
 	//메인캠 컨트롤
 	Camera::main->ControlMainCam();
-	
-	PhysicsCenter::UpdateSpherePhysics();
+
+	if (INPUT->KeyDown('R')) {
+		PhysicsCenter::InitSpherePhysics();
+		ball->SetWorldPos(Vector3(0, 50, 0));
+	}
+	if (INPUT->KeyDown(VK_SPACE)) {
+		PhysicsCenter::InitSpherePhysics();
+		ball->SetWorldPos(Vector3(0, 5, 0));
+		PhysicsCenter::g_Direction = Vector3(0, 1, 1);
+		PhysicsCenter::g_Velocity = 50;
+	}
+
+	if(!PhysicsCenter::g_SteadyState)
+		PhysicsCenter::UpdateSpherePhysics();
 
 	//런타임에 객체는 반드시 업데이트 호출
 	grid->Update();
