@@ -24,7 +24,7 @@ void PhysicsCenter::UpdateSpherePhysics()
 	for (size_t i = 0; i < end; i++)
 	{
 		GameObject* child = g_Terrain->children["grass" + to_string(i)];
-		if (g_Ball->Intersect(child))
+		if (child->collider && g_Ball->Intersect(child))
 		{
 			Vector3 dir;
 			Vector3::Reflect(direction + gravity, child->GetUp(), dir);

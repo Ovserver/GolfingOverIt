@@ -1,0 +1,240 @@
+<Root Name="Actor" Visible="true" ObType="1">
+    <Transform>
+        <Position X="0" Y="0" Z="0"/>
+        <Scale X="1" Y="1" Z="1"/>
+        <Rotation X="0" Y="0" Z="0"/>
+    </Transform>
+    <Children Size="17"/>
+    <Child0 Name="grass" Visible="true" ObType="0">
+        <Mesh File="grass.mesh"/>
+        <Shader File="6.Cube.hlsl"/>
+        <Collider ColliderType="2" Visible="true">
+            <Position X="0" Y="0" Z="0"/>
+            <Scale X="1" Y="1" Z="1"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Collider>
+        <Material File="grass.mtl"/>
+        <Transform>
+            <Position X="0" Y="0.5" Z="0"/>
+            <Scale X="40" Y="0.5" Z="40"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Transform>
+        <Children Size="0"/>
+    </Child0>
+    <Child1 Name="grass2" Visible="true" ObType="0">
+        <Mesh File="grass.mesh"/>
+        <Shader File="6.Cube.hlsl"/>
+        <Collider ColliderType="2" Visible="true">
+            <Position X="0" Y="0" Z="0"/>
+            <Scale X="1" Y="1" Z="1"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Collider>
+        <Material File="grass.mtl"/>
+        <Transform>
+            <Position X="137.60001" Y="38.549999" Z="1516.05"/>
+            <Scale X="200" Y="0.5" Z="500"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Transform>
+        <Children Size="0"/>
+    </Child1>
+    <Child2 Name="grass3" Visible="true" ObType="0">
+        <Mesh File="grass.mesh"/>
+        <Shader File="6.Cube.hlsl"/>
+        <Collider ColliderType="2" Visible="true">
+            <Position X="0" Y="0" Z="0"/>
+            <Scale X="1" Y="1" Z="1"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Collider>
+        <Material File="grass.mtl"/>
+        <Transform>
+            <Position X="-227.3" Y="38.549999" Z="1762.8"/>
+            <Scale X="165" Y="0.5" Z="200"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Transform>
+        <Children Size="0"/>
+    </Child2>
+    <Child3 Name="obstacle grass" Visible="true" ObType="0">
+        <Mesh File="obstacle grass.mesh"/>
+        <Shader File="6.Cube.hlsl"/>
+        <Collider ColliderType="2" Visible="true">
+            <Position X="0" Y="0" Z="0"/>
+            <Scale X="1" Y="1" Z="1"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Collider>
+        <Material File="obstacle grass.mtl"/>
+        <Transform>
+            <Position X="0" Y="0" Z="350"/>
+            <Scale X="400" Y="0" Z="500"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Transform>
+        <Children Size="0"/>
+    </Child3>
+    <Child4 Name="obstacle grass2" Visible="true" ObType="0">
+        <Mesh File="obstacle grass.mesh"/>
+        <Shader File="6.Cube.hlsl"/>
+        <Collider ColliderType="2" Visible="true">
+            <Position X="0" Y="0" Z="0"/>
+            <Scale X="1" Y="1" Z="1"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Collider>
+        <Material File="obstacle grass.mtl"/>
+        <Transform>
+            <Position X="0" Y="0" Z="1350"/>
+            <Scale X="400" Y="0" Z="500"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Transform>
+        <Children Size="0"/>
+    </Child4>
+    <Child5 Name="obstacle grass3" Visible="true" ObType="0">
+        <Mesh File="obstacle grass.mesh"/>
+        <Shader File="6.Cube.hlsl"/>
+        <Collider ColliderType="2" Visible="true">
+            <Position X="0" Y="0" Z="0"/>
+            <Scale X="1" Y="1" Z="1"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Collider>
+        <Material File="obstacle grass.mtl"/>
+        <Transform>
+            <Position X="0" Y="0" Z="2350"/>
+            <Scale X="400" Y="0" Z="500"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Transform>
+        <Children Size="0"/>
+    </Child5>
+    <Child6 Name="obstacle grass4" Visible="true" ObType="0">
+        <Mesh File="6.Sphere.mesh"/>
+        <Shader File="6.Cube.hlsl"/>
+        <Collider ColliderType="0" Visible="true">
+            <Position X="0" Y="0" Z="0"/>
+            <Scale X="1" Y="1" Z="1"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Collider>
+        <Material File="obstacle grass.mtl"/>
+        <Transform>
+            <Position X="397.95001" Y="0.5" Z="1364.4"/>
+            <Scale X="112.25" Y="64.599998" Z="1500"/>
+            <Rotation X="0" Y="6.2831516" Z="6.423615"/>
+        </Transform>
+        <Children Size="0"/>
+    </Child6>
+    <Child7 Name="obstacle grass5" Visible="true" ObType="0">
+        <Mesh File="6.Sphere.mesh"/>
+        <Shader File="6.Cube.hlsl"/>
+        <Collider ColliderType="0" Visible="true">
+            <Position X="0" Y="0" Z="0"/>
+            <Scale X="1" Y="1" Z="1"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Collider>
+        <Material File="obstacle grass.mtl"/>
+        <Transform>
+            <Position X="25.549999" Y="-13.55" Z="1000.9"/>
+            <Scale X="57.450001" Y="190.64999" Z="681.79999"/>
+            <Rotation X="0" Y="4.7123637" Z="-1.4076005"/>
+        </Transform>
+        <Children Size="0"/>
+    </Child7>
+    <Child8 Name="obstacle grass6" Visible="true" ObType="0">
+        <Mesh File="6.Sphere.mesh"/>
+        <Shader File="6.Cube.hlsl"/>
+        <Collider ColliderType="0" Visible="true">
+            <Position X="0" Y="0" Z="0"/>
+            <Scale X="1" Y="1" Z="1"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Collider>
+        <Material File="obstacle grass.mtl"/>
+        <Transform>
+            <Position X="-397.95001" Y="0" Z="1364.4"/>
+            <Scale X="113.3" Y="44.049999" Z="1500"/>
+            <Rotation X="0" Y="-3.1415758" Z="6.423615"/>
+        </Transform>
+        <Children Size="0"/>
+    </Child8>
+    <Child9 Name="obstacle grass7" Visible="true" ObType="0">
+        <Mesh File="6.Sphere.mesh"/>
+        <Shader File="6.Cube.hlsl"/>
+        <Material File="obstacle grass.mtl"/>
+        <Transform>
+            <Position X="-31.9" Y="3.3499999" Z="2001.3"/>
+            <Scale X="107.7" Y="59.299999" Z="488.60001"/>
+            <Rotation X="0" Y="1.5707879" Z="0.27752331"/>
+        </Transform>
+        <Children Size="0"/>
+    </Child9>
+    <Child10 Name="obstacle grass8" Visible="true" ObType="0">
+        <Mesh File="6.Sphere.mesh"/>
+        <Shader File="6.Cube.hlsl"/>
+        <Material File="obstacle grass.mtl"/>
+        <Transform>
+            <Position X="0" Y="-81.400002" Z="2828.3501"/>
+            <Scale X="225.5" Y="177.10001" Z="684.59998"/>
+            <Rotation X="0" Y="7.8539395" Z="-0.72692579"/>
+        </Transform>
+        <Children Size="0"/>
+    </Child10>
+    <Child11 Name="snad" Visible="true" ObType="0">
+        <Mesh File="6.Cube.mesh"/>
+        <Shader File="6.Cube.hlsl"/>
+        <Material File="sand.mtl"/>
+        <Transform>
+            <Position X="-189.2" Y="18" Z="1405.65"/>
+            <Scale X="176.05" Y="0" Z="197.85001"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Transform>
+        <Children Size="0"/>
+    </Child11>
+    <Child12 Name="snad2" Visible="true" ObType="0">
+        <Mesh File="6.Sphere.mesh"/>
+        <Shader File="6.Cube.hlsl"/>
+        <Material File="sand.mtl"/>
+        <Transform>
+            <Position X="-173.89999" Y="0.69999999" Z="1179.8"/>
+            <Scale X="224.64999" Y="37.549999" Z="57.700001"/>
+            <Rotation X="-2.6755755" Y="0" Z="3.1415758"/>
+        </Transform>
+        <Children Size="0"/>
+    </Child12>
+    <Child13 Name="snad3" Visible="true" ObType="0">
+        <Mesh File="6.Sphere.mesh"/>
+        <Shader File="6.Cube.hlsl"/>
+        <Material File="sand.mtl"/>
+        <Transform>
+            <Position X="-81.099998" Y="13.8" Z="1364.5"/>
+            <Scale X="253.75" Y="32.200001" Z="63.900002"/>
+            <Rotation X="0.49828884" Y="4.7123637" Z="0"/>
+        </Transform>
+        <Children Size="0"/>
+    </Child13>
+    <Child14 Name="snad4" Visible="true" ObType="0">
+        <Mesh File="6.Sphere.mesh"/>
+        <Shader File="6.Cube.hlsl"/>
+        <Material File="sand.mtl"/>
+        <Transform>
+            <Position X="-346.5" Y="2.0999999" Z="1366.25"/>
+            <Scale X="72.599998" Y="40.299999" Z="306.54999"/>
+            <Rotation X="0" Y="0" Z="-0.28885043"/>
+        </Transform>
+        <Children Size="0"/>
+    </Child14>
+    <Child15 Name="snad5" Visible="true" ObType="0">
+        <Mesh File="6.Sphere.mesh"/>
+        <Shader File="6.Cube.hlsl"/>
+        <Material File="sand.mtl"/>
+        <Transform>
+            <Position X="-224.89999" Y="15.25" Z="1536.2"/>
+            <Scale X="79.449997" Y="33.950001" Z="215.89999"/>
+            <Rotation X="0" Y="-1.5707879" Z="0.26703396"/>
+        </Transform>
+        <Children Size="0"/>
+    </Child15>
+    <Child16 Name="water" Visible="true" ObType="0">
+        <Mesh File="6.Cube.mesh"/>
+        <Shader File="6.Cube.hlsl"/>
+        <Material File="Test.mtl"/>
+        <Transform>
+            <Position X="0" Y="4.9499998" Z="2370.1499"/>
+            <Scale X="395.60001" Y="0" Z="368.89999"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Transform>
+        <Children Size="0"/>
+    </Child16>
+</Root>

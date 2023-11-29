@@ -15,7 +15,7 @@ Scene1::Scene1()
 	ball = Actor::Create();
 	ball->LoadFile("test_ball.xml");
 	terrain = Actor::Create();
-	terrain->LoadFile("test_terrain.xml");
+	terrain->LoadFile("grass.xml");
 	objects = Actor::Create();
 
 	terrain->Update();
@@ -64,7 +64,7 @@ void Scene1::Update()
 	//메인캠 컨트롤
 	Camera::main->ControlMainCam();
 	
-	PhysicsCenter::UpdateSpherePhysics();
+	//PhysicsCenter::UpdateSpherePhysics();
 
 	//런타임에 객체는 반드시 업데이트 호출
 	grid->Update();
