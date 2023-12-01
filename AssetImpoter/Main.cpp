@@ -6,9 +6,9 @@ Main::Main()
 
     grid = Grid::Create();
 
-    cam1 = Camera::Create();
-    cam1->LoadFile("Cam.xml");
-    Camera::main = cam1;
+    cam_main = Camera::Create();
+    cam_main->LoadFile("Cam.xml");
+    Camera::main = cam_main;
 
     temp = Actor::Create();
 
@@ -37,7 +37,7 @@ void Main::Update()
 
     ImGui::Begin("Hierarchy");
     grid->RenderHierarchy();
-    cam1->RenderHierarchy();
+    cam_main->RenderHierarchy();
     temp->RenderHierarchy();
     ImGui::End();
 
@@ -290,13 +290,13 @@ void Main::Render()
 
 void Main::ResizeScreen()
 {
-    cam1->viewport.x = 0.0f;
-    cam1->viewport.y = 0.0f;
-    cam1->viewport.width = App.GetWidth();
-    cam1->viewport.height = App.GetHeight();
+    cam_main->viewport.x = 0.0f;
+    cam_main->viewport.y = 0.0f;
+    cam_main->viewport.width = App.GetWidth();
+    cam_main->viewport.height = App.GetHeight();
 
-    cam1->width = App.GetWidth();
-    cam1->height = App.GetHeight();
+    cam_main->width = App.GetWidth();
+    cam_main->height = App.GetHeight();
 
    
 }

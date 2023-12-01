@@ -16,9 +16,9 @@ void Main::Init()
 {
 	grid = Grid::Create();
 
-	cam1 = Camera::Create();
-	cam1->LoadFile("Cam.xml");
-	Camera::main = cam1;
+	cam_main = Camera::Create();
+	cam_main->LoadFile("Cam.xml");
+	Camera::main = cam_main;
 
 
 }
@@ -34,9 +34,9 @@ void Main::Update()
 	grid->RenderHierarchy();
 	ImGui::End();
 
-	cam1->ControlMainCam();
+	cam_main->ControlMainCam();
 
-	cam1->Update();
+	cam_main->Update();
 	grid->Update();
 }
 
@@ -51,7 +51,7 @@ void Main::PreRender()
 
 void Main::Render()
 {
-	cam1->Set();
+	cam_main->Set();
 	LIGHT->Set();
 	
 	grid->Render();
@@ -60,12 +60,12 @@ void Main::Render()
 
 void Main::ResizeScreen()
 {
-	cam1->viewport.x = 0.0f;
-	cam1->viewport.y = 0.0f;
-	cam1->viewport.width = App.GetWidth();
-	cam1->viewport.height = App.GetHeight();
-	cam1->width = App.GetWidth();
-	cam1->height = App.GetHeight();
+	cam_main->viewport.x = 0.0f;
+	cam_main->viewport.y = 0.0f;
+	cam_main->viewport.width = App.GetWidth();
+	cam_main->viewport.height = App.GetHeight();
+	cam_main->width = App.GetWidth();
+	cam_main->height = App.GetHeight();
 }
 
 int WINAPI wWinMain(HINSTANCE instance, HINSTANCE prevInstance, LPWSTR param, int command)

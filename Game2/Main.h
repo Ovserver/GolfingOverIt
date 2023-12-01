@@ -3,7 +3,7 @@ class Main : public Scene
 {
 
 private:
-	Camera*		cam1;
+	Camera*		cam_main;
 	Grid*		grid;
 
 public:

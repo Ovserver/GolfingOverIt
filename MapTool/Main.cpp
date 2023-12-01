@@ -27,20 +27,20 @@ void Main::Init()
 {
 	grid = Grid::Create();
 
-	cam1 = Camera::Create();
-	cam1->LoadFile("Cam.xml");
+	cam_main = Camera::Create();
+	cam_main->LoadFile("Cam.xml");
 
 	map = g_Terrain::Create();
 	map->shader = RESOURCE->shaders.Load("5.MapEditor.hlsl");
 	map->CreateStructuredBuffer();
 
-	Camera::main = cam1;
-	cam1->viewport.x = 0.0f;
-	cam1->viewport.y = 0.0f;
-	cam1->viewport.width = App.GetWidth();
-	cam1->viewport.height = App.GetHeight();
-	cam1->width = App.GetWidth();
-	cam1->height = App.GetHeight();
+	Camera::main = cam_main;
+	cam_main->viewport.x = 0.0f;
+	cam_main->viewport.y = 0.0f;
+	cam_main->viewport.width = App.GetWidth();
+	cam_main->viewport.height = App.GetHeight();
+	cam_main->width = App.GetWidth();
+	cam_main->height = App.GetHeight();
 }
 
 void Main::Release()
@@ -83,12 +83,12 @@ void Main::Update()
 	map->RenderHierarchy();
 	ImGui::End();
 
-	cam1->ControlMainCam();
+	cam_main->ControlMainCam();
 
 	grid->Update();
 	map->Update();
 
-	cam1->Update();
+	cam_main->Update();
 
 	
 
@@ -225,19 +225,19 @@ void Main::Render()
 	D3D->GetDC()->Unmap(brushBuffer, 0);
 
 	LIGHT->Set();
-	cam1->Set();
+	cam_main->Set();
 	//grid->Render();
 	map->Render();
 }
 
 void Main::ResizeScreen()
 {
-	cam1->viewport.x = 0.0f;
-	cam1->viewport.y = 0.0f;
-	cam1->viewport.width = App.GetWidth();
-	cam1->viewport.height = App.GetHeight();
-	cam1->width = App.GetWidth();
-	cam1->height = App.GetHeight();
+	cam_main->viewport.x = 0.0f;
+	cam_main->viewport.y = 0.0f;
+	cam_main->viewport.width = App.GetWidth();
+	cam_main->viewport.height = App.GetHeight();
+	cam_main->width = App.GetWidth();
+	cam_main->height = App.GetHeight();
 }
 
 void Main::NormalizeWeight(Vector4& in)

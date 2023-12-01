@@ -49,7 +49,7 @@ private:
 
 	g_Terrain* map;
 
-	Camera* cam1;
+	Camera* cam_main;
 	Grid* grid;
 
 

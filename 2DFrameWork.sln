@@ -76,6 +76,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GameObject", "GameObject", 
 		Contents\GameObject\Cam.xml = Contents\GameObject\Cam.xml
 		Contents\GameObject\CamInit.xml = Contents\GameObject\CamInit.xml
 		Contents\GameObject\CamZoom.xml = Contents\GameObject\CamZoom.xml
+		Contents\GameObject\dir_arrow.xml = Contents\GameObject\dir_arrow.xml
 		Contents\GameObject\grass.xml = Contents\GameObject\grass.xml
 		Contents\GameObject\Grid.xml = Contents\GameObject\Grid.xml
 		Contents\GameObject\handinhand.xml = Contents\GameObject\handinhand.xml
@@ -86,10 +87,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GameObject", "GameObject", 
 		Contents\GameObject\RSPHuman.xml = Contents\GameObject\RSPHuman.xml
 		Contents\GameObject\RunHuman.xml = Contents\GameObject\RunHuman.xml
 		Contents\GameObject\Scissors.xml = Contents\GameObject\Scissors.xml
+		Contents\GameObject\Sky.xml = Contents\GameObject\Sky.xml
 		Contents\GameObject\Spear.xml = Contents\GameObject\Spear.xml
 		Contents\GameObject\Sphere.xml = Contents\GameObject\Sphere.xml
 		Contents\GameObject\Sun.xml = Contents\GameObject\Sun.xml
+		Contents\GameObject\test_ball.xml = Contents\GameObject\test_ball.xml
 		Contents\GameObject\test_terrain.xml = Contents\GameObject\test_terrain.xml
+		Contents\GameObject\test_ui.xml = Contents\GameObject\test_ui.xml
+		Contents\GameObject\test_ui2.xml = Contents\GameObject\test_ui2.xml
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AssetImpoter", "AssetImpoter\AssetImpoter.vcxproj", "{408B5E5E-A44D-47B8-AC78-A324B4051C2D}"
