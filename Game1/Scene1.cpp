@@ -35,6 +35,8 @@ Scene1::Scene1()
 	objects = Actor::Create();
 	objects->LoadFile("test_objects.xml");
 
+	ui_ball_nav = Actor::Create();
+
 	ui_pannel_minimap = UI::Create();
 	ui_pannel_minimap->LoadFile("UI_pannel_minimap.xml");
 
@@ -47,8 +49,9 @@ Scene1::Scene1()
 
 	PHYSICS->g_Ball = ball;
 	PHYSICS->InitTerrainInfo(terrain);
-	PHYSICS->InitObjectsInfo(objects);
+	PHYSICS->InitObjectsInfo(terrain);
 	player->SetWorldPos(pos_player_init + ball->GetWorldPos());
+	player->Update();
 	cam_main->SetWorldPos(ball->GetWorldPos() + Vector3(0, 10, -30));
 	cam_main->Update();
 	game_state = GameState::STANDBY;
@@ -64,6 +67,7 @@ Scene1::~Scene1()
 	ball->Release();
 	terrain->Release();
 	objects->Release();
+	ui_ball_nav->Release();
 	ui_pannel_minimap->Release();
 	test_gauge_h->Release();
 	test_gauge_v->Release();
@@ -96,6 +100,7 @@ void Scene1::Update()
 	terrain->RenderHierarchy();
 	arrow_dir->RenderHierarchy();
 	objects->RenderHierarchy();
+	ui_ball_nav->RenderHierarchy();
 	ui_pannel_minimap->RenderHierarchy();
 	test_gauge_h->RenderHierarchy();
 	test_gauge_v->RenderHierarchy();
@@ -105,11 +110,11 @@ void Scene1::Update()
 
 
 	//메인캠 컨트롤
-	//Camera::main->ControlMainCam();
+	Camera::main->ControlMainCam();
 
 	if (INPUT->KeyDown('R'))
 	{
-		PHYSICS->InitSpherePhysics(Vector3(0, 2, 0));
+		PHYSICS->InitSpherePhysics(Vector3(0, 2.5f, 0));
 		game_state = GameState::STANDBY;
 		InitToGameStandby();
 	}
@@ -178,7 +183,9 @@ void Scene1::Update()
 			else if (PHYSICS->g_GroundType == GroundType::WATER)
 			{
 				ball->SetWorldPos(pos_last_ball);
+				ball->Update();
 				player->SetWorldPos(pos_player_init + ball->GetWorldPos());
+				cam_main->SetWorldPos(ball->GetWorldPos() + Vector3(0, 10, -30));
 			}
 			else
 				player->SetWorldPos(pos_player_init + ball->GetWorldPos());
@@ -199,6 +206,7 @@ void Scene1::Update()
 	terrain->Update();
 	arrow_dir->Update();
 	objects->Update();
+	ui_ball_nav->Update();
 	ui_pannel_minimap->Update();
 	test_gauge_h->Update();
 	test_gauge_v->Update();
@@ -244,7 +252,8 @@ void Scene1::Render()
 	ball->Render();
 	terrain->Render();
 	objects->Render();
-		
+	ui_ball_nav->Render();
+
 	RECT rect;
 	DWRITE->RenderText(L"HOLE : "+ to_wstring(stats_hole), RECT({200,200,500,500}));
 
@@ -261,6 +270,13 @@ void Scene1::ResizeScreen()
 	Camera::main->viewport.height = App.GetHeight();
 	Camera::main->width = App.GetWidth();
 	Camera::main->height = App.GetHeight();
+
+	cam_minimap->viewport.x = 200.0f;
+	cam_minimap->viewport.y = 200.0f;
+	cam_minimap->viewport.width = 800;
+	cam_minimap->viewport.height = 800;
+	//cam_minimap->width = App.GetWidth();
+	//cam_minimap->height = App.GetHeight();
 }
 
 void Scene1::InitToGameStandby()

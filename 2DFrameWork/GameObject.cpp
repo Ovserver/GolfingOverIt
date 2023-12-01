@@ -185,9 +185,6 @@ void GameObject::Update()
 
 	for (auto it = children.begin(); it != children.end(); it++)
 		it->second->Update();
-
-
-
 }
 
 void GameObject::Render(shared_ptr<Shader> pShader)

@@ -1,9 +1,10 @@
 <Root Name="Sky" Visible="true" ObType="5">
     <Mesh File="0.Cube.mesh"/>
     <Shader File="0.Sky.hlsl"/>
+    <Material File="Test.mtl"/>
     <Transform>
         <Position X="0" Y="0" Z="0"/>
-        <Scale X="1" Y="1" Z="1"/>
+        <Scale X="0.050000001" Y="0.050000001" Z="0.050000001"/>
         <Rotation X="0" Y="0" Z="0"/>
     </Transform>
     <Sky file="bg2.dds"/>

@@ -23,7 +23,7 @@ void PhysicsCenter::InitTerrainInfo(Actor* _terrain)
 			m_GrassList.push_back(temp);
 		if ((temp = g_Terrain->Find("obstacle grass" + to_string(i))) && temp->collider)
 			m_OBGrassList.push_back(temp);
-		if ((temp = g_Terrain->Find("sand" + to_string(i))) && temp->collider)
+		if ((temp = g_Terrain->Find("snad" + to_string(i))) && temp->collider)
 			m_SandList.push_back(temp);
 		if ((temp = g_Terrain->Find("water" + to_string(i))) && temp->collider)
 			m_WaterList.push_back(temp);
@@ -40,6 +40,14 @@ void PhysicsCenter::InitObjectsInfo(Actor* _objects)
 	{
 		GameObject* temp = nullptr;
 		if ((temp = g_Objects->Find("object" + to_string(i))) && temp->collider)
+			m_ObjList.push_back(temp);
+		if ((temp = g_Objects->Find("leaf" + to_string(i))) && temp->collider)
+			m_ObjList.push_back(temp);
+		if ((temp = g_Objects->Find("rock" + to_string(i))) && temp->collider)
+			m_ObjList.push_back(temp);
+		if ((temp = g_Objects->Find("tree" + to_string(i))) && temp->collider)
+			m_ObjList.push_back(temp);
+		if ((temp = g_Objects->Find("box" + to_string(i))) && temp->collider)
 			m_ObjList.push_back(temp);
 	}
 }
@@ -106,6 +114,7 @@ void PhysicsCenter::UpdateSpherePhysics()
 				g_Ball->Update();
 			}
 			SetPhysicsValue(g_Velocity, g_Gravity);
+			//g_GroundType = GroundType::WATER;
 			return;
 			i = end;
 		}

@@ -45,6 +45,7 @@ private:
 	Actor* terrain;
 	Actor* arrow_dir;
 	Actor* objects;
+	Actor* ui_ball_nav;
 	UI* ui_pannel_minimap;
 	UI* test_gauge_h;
 	UI* test_gauge_v;
