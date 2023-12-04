@@ -13,6 +13,11 @@ Scene1::Scene1()
 	cam_minimap = Camera::Create();
 	cam_minimap->LoadFile("Cam_minimap.xml");
 
+	origin_cam_minimap_size.x = cam_minimap->viewport.x;
+	origin_cam_minimap_size.y = cam_minimap->viewport.y;
+	origin_cam_minimap_size.z = cam_minimap->viewport.width;
+	origin_cam_minimap_size.w = cam_minimap->viewport.height;
+
 	skybox = Sky::Create();
 	skybox->LoadFile("sky.xml");
 
@@ -30,7 +35,7 @@ Scene1::Scene1()
 	terrain->Update();
 
 	arrow_dir = Actor::Create();
-	arrow_dir->LoadFile("dir_arrow.xml");
+	arrow_dir->LoadFile("arrow_dir_fixed.xml");
 
 	objects = Actor::Create();
 	objects->LoadFile("test_objects.xml");
@@ -40,12 +45,19 @@ Scene1::Scene1()
 	ui_pannel_minimap = UI::Create();
 	ui_pannel_minimap->LoadFile("UI_pannel_minimap.xml");
 
+	ui_pannel_hole_count = UI::Create();
+	ui_pannel_hole_count->LoadFile("UI_pannel_holecount.xml");
+
+	ui_pannel_power_gauge = UI::Create();
+	ui_pannel_power_gauge->LoadFile("UI_pannel_gauge.xml");
+
+	ui_power_gauge = UI::Create();
+	ui_power_gauge->LoadFile("UI_gauge.xml");
+
 	test_gauge_h = UI::Create();
 	test_gauge_h->LoadFile("test_ui.xml");
 	test_gauge_v = UI::Create();
 	test_gauge_v->LoadFile("test_ui2.xml");
-	test_gauge_p = UI::Create();
-	test_gauge_p->LoadFile("test_ui3.xml");
 
 	PHYSICS->g_Ball = ball;
 	PHYSICS->InitTerrainInfo(terrain);
@@ -55,6 +67,8 @@ Scene1::Scene1()
 	cam_main->SetWorldPos(ball->GetWorldPos() + Vector3(0, 10, -30));
 	cam_main->Update();
 	game_state = GameState::STANDBY;
+
+
 }
 Scene1::~Scene1()
 {
@@ -69,9 +83,11 @@ Scene1::~Scene1()
 	objects->Release();
 	ui_ball_nav->Release();
 	ui_pannel_minimap->Release();
+	ui_pannel_hole_count->Release();
+	ui_pannel_power_gauge->Release();
+	ui_power_gauge->Release();
 	test_gauge_h->Release();
 	test_gauge_v->Release();
-	test_gauge_p->Release();
 }
 
 void Scene1::Init()
@@ -102,15 +118,17 @@ void Scene1::Update()
 	objects->RenderHierarchy();
 	ui_ball_nav->RenderHierarchy();
 	ui_pannel_minimap->RenderHierarchy();
+	ui_pannel_hole_count->RenderHierarchy();
+	ui_pannel_power_gauge->RenderHierarchy();
+	ui_power_gauge->RenderHierarchy();
 	test_gauge_h->RenderHierarchy();
 	test_gauge_v->RenderHierarchy();
-	test_gauge_p->RenderHierarchy();
 	ImGui::End();
 	//gui출력끝
 
 
 	//메인캠 컨트롤
-	Camera::main->ControlMainCam();
+	//Camera::main->ControlMainCam();
 
 	if (INPUT->KeyDown('R'))
 	{
@@ -131,7 +149,7 @@ void Scene1::Update()
 		if (INPUT->KeyPress(VK_SPACE))
 		{
 			if (ball_velocity <= MAX_POWER)
-				ball_velocity += DELTA * 40;
+				ball_velocity += DELTA * 100;
 			else
 				ball_velocity = 0;
 		}
@@ -155,8 +173,11 @@ void Scene1::Update()
 			}
 			Vector3 arrow_vec = Vector3(player_horizontal_power, player_vertical_power, 0);
 			arrow_vec += Vector3(0, 1, 1) * 100.0f;
-			arrow_dir->rotation.x = atan2(arrow_vec.y, arrow_vec.z) - HALFPI;
-			arrow_dir->rotation.y = atan2(arrow_vec.y, arrow_vec.x) - HALFPI;
+			if (arrow_dir)
+			{
+				arrow_dir->rotation.x = atan2(arrow_vec.y, arrow_vec.z) - HALFPI;
+				arrow_dir->rotation.y = atan2(arrow_vec.y, arrow_vec.x) - HALFPI;
+			}
 		}
 		if (INPUT->KeyUp(VK_SPACE))
 		{
@@ -168,6 +189,11 @@ void Scene1::Update()
 			++stats_hole;
 			game_state = GameState::ANIMTIME;
 		}
+
+		//test UI Update
+		test_gauge_h->SetWorldPosX(player_horizontal_power / AbsSum(MIN_PLAYER_XPOS, MAX_PLAYER_XPOS) * 2);
+		test_gauge_v->SetWorldPosX(player_vertical_power / AbsSum(MIN_PLAYER_ZPOS, MAX_PLAYER_ZPOS) * 2 - 1);
+		ui_power_gauge->scale.y = ball_velocity / (MAX_POWER * 2);
 	}
 	else if (game_state == GameState::ANIMTIME)
 	{
@@ -193,10 +219,6 @@ void Scene1::Update()
 		}
 	}
 
-	//test UI Update
-	test_gauge_h->SetWorldPosX(player_horizontal_power / AbsSum(MIN_PLAYER_XPOS, MAX_PLAYER_XPOS) * 2);
-	test_gauge_v->SetWorldPosX(player_vertical_power / AbsSum(MIN_PLAYER_ZPOS, MAX_PLAYER_ZPOS) * 2 - 1);
-	test_gauge_p->scale.y = ball_velocity / (MAX_POWER * 2);
 
 	//런타임에 객체는 반드시 업데이트 호출
 	skybox->Update();
@@ -208,9 +230,9 @@ void Scene1::Update()
 	objects->Update();
 	ui_ball_nav->Update();
 	ui_pannel_minimap->Update();
-	test_gauge_h->Update();
-	test_gauge_v->Update();
-	test_gauge_p->Update();
+	ui_pannel_hole_count->Update();
+	ui_pannel_power_gauge->Update();
+	ui_power_gauge->Update();
 	cam_minimap->Update();
 }
 
@@ -237,14 +259,12 @@ void Scene1::Render()
 	terrain->Render();
 	objects->Render();
 	ui_pannel_minimap->Render();
+	ui_pannel_hole_count->Render();
 	if (game_state == GameState::CONTROL) {
 		arrow_dir->Render();
-		test_gauge_h->Render();
-		test_gauge_v->Render();
-		test_gauge_p->Render();
+		ui_pannel_power_gauge->Render();
+		ui_power_gauge->Render();
 	}
-
-
 	Camera::main = cam_minimap;
 	Camera::main->Set();
 	LIGHT->Set();       //라이트세팅
@@ -255,8 +275,7 @@ void Scene1::Render()
 	ui_ball_nav->Render();
 
 	RECT rect;
-	DWRITE->RenderText(L"HOLE : "+ to_wstring(stats_hole), RECT({200,200,500,500}));
-
+	DWRITE->RenderText(L"HOLE\n\n" + to_wstring(stats_hole), RECT({ 156,57,500,500 }));
 
 	Camera::main = cam_main;
 	Camera::main->Set();
@@ -271,18 +290,18 @@ void Scene1::ResizeScreen()
 	Camera::main->width = App.GetWidth();
 	Camera::main->height = App.GetHeight();
 
-	cam_minimap->viewport.x = 200.0f;
-	cam_minimap->viewport.y = 200.0f;
-	cam_minimap->viewport.width = 800;
-	cam_minimap->viewport.height = 800;
-	//cam_minimap->width = App.GetWidth();
-	//cam_minimap->height = App.GetHeight();
+	cam_minimap->viewport.x = origin_cam_minimap_size.x / 1280 * App.GetWidth();
+	cam_minimap->viewport.y = origin_cam_minimap_size.y / 720 * App.GetHeight();
+	cam_minimap->viewport.width = origin_cam_minimap_size.z / 1280 * App.GetWidth();
+	cam_minimap->viewport.height = origin_cam_minimap_size.w / 720 * App.GetHeight();
+	
 }
 
 void Scene1::InitToGameStandby()
 {
 	cam_main->SetWorldPos(ball->GetWorldPos() + Vector3(0, 10, -30));
-	arrow_dir->SetWorldPos(ball->GetWorldPos() + Vector3(0, 5, 0));
+	if (arrow_dir)
+		arrow_dir->SetWorldPos(ball->GetWorldPos() + Vector3(0, 0, 2));
 	pos_last_ball = ball->GetWorldPos();
 	player_horizontal_power = 0;
 	player_vertical_power = 0;

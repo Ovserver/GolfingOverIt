@@ -32,6 +32,8 @@ private:
 	float player_vertical_power = 0;
 	float ball_velocity = 0.0f;
 
+	XMFLOAT4 origin_cam_minimap_size;
+
 	GameState game_state;
 	Vector3 pos_player_init;
 	Vector3 pos_last_ball;
@@ -47,7 +49,9 @@ private:
 	Actor* objects;
 	Actor* ui_ball_nav;
 	UI* ui_pannel_minimap;
+	UI* ui_pannel_hole_count;
+	UI* ui_pannel_power_gauge;
+	UI* ui_power_gauge;
 	UI* test_gauge_h;
 	UI* test_gauge_v;
-	UI* test_gauge_p;
 };
