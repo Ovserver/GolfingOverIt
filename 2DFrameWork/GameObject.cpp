@@ -185,6 +185,9 @@ void GameObject::Update()
 
 	for (auto it = children.begin(); it != children.end(); it++)
 		it->second->Update();
+
+
+
 }
 
 void GameObject::Render(shared_ptr<Shader> pShader)
@@ -346,6 +349,27 @@ bool Actor::DeleteAllObject(string Name)
 
 
 
+}
+
+bool Actor::ReleaseLinkObject(string ActorName)
+{
+	if (ActorName == name) return false;
+
+	auto temp = obList.find(ActorName);
+
+	if (temp == obList.end())  return false;
+
+	//지워질대상,지워질대상의 부모 포인터
+	GameObject* Target = temp->second;
+	GameObject* Parent = temp->second->parent;
+	//부모리스트에서 타겟 비우기
+	Parent->children.erase(Parent->children.find(ActorName));
+	Target->parent = nullptr;
+	Target->root = this;
+	obList.erase(temp);
+	Target->SetWorldPos(Target->GetWorldPos());
+
+	return true;
 }
 
 void Actor::Render(shared_ptr<Shader> pShader)

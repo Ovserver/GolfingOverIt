@@ -100,6 +100,9 @@ public:
 	GameObject*		Find(string name);
 	bool            DeleteObject(string Name);
 	bool            DeleteAllObject(string Name);
+	//                 
+	bool			ReleaseLinkObject(string ActorName);
+
 	virtual void	RenderDetail();
 	void			SaveFile(string file);
 	void			LoadFile(string file);

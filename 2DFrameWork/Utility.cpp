@@ -108,9 +108,9 @@ Vector3 Utility::QuaternionToYawPtichRoll(Quaternion q1)
 	float sqz = q1.z * q1.z;
 	float unit = sqx + sqy + sqz + sqw; // if normalised is one, otherwise is correction factor
 
-	float line = q1.x * q1.w - q1.y * q1.z;
+	float test = q1.x * q1.w - q1.y * q1.z;
 	Vector3 v;
-	if (line > 0.4995f * unit) { // singularity at north pole
+	if (test > 0.4995f * unit) { // singularity at north pole
 
 		v.y = 2.0f * atan2f(q1.y, q1.x);
 		v.x = PI / 2.0f;
@@ -118,7 +118,7 @@ Vector3 Utility::QuaternionToYawPtichRoll(Quaternion q1)
 		return NormalizeAngles(v);
 	}
 
-	if (line < -0.4995f * unit) { // singularity at south pole
+	if (test < -0.4995f * unit) { // singularity at south pole
 
 		v.y = -2.0f * atan2f(q1.y, q1.x);
 		v.x = -PI / 2.0f;
