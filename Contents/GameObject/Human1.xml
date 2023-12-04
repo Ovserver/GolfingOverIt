@@ -1,0 +1,66 @@
+<Root Name="Actor" Visible="true" ObType="1">
+    <Mesh File="meshBD.mesh"/>
+    <Shader File="6.Cube.hlsl"/>
+    <Material File="body.mtl"/>
+    <Transform>
+        <Position X="-73.550003" Y="4.6500001" Z="-14.4"/>
+        <Scale X="1" Y="1.5" Z="0.60000002"/>
+        <Rotation X="0" Y="0" Z="0"/>
+    </Transform>
+    <Children Size="5"/>
+    <Child0 Name="Head" Visible="true" ObType="1">
+        <Mesh File="meshHD.mesh"/>
+        <Shader File="6.Cube.hlsl"/>
+        <Material File="head.mtl"/>
+        <Transform>
+            <Position X="0" Y="1.6333333" Z="0"/>
+            <Scale X="1" Y="0.64999998" Z="1.65"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Transform>
+        <Children Size="0"/>
+    </Child0>
+    <Child1 Name="LArm" Visible="true" ObType="1">
+        <Mesh File="meshLA.mesh"/>
+        <Shader File="6.Cube.hlsl"/>
+        <Material File="larm.mtl"/>
+        <Transform>
+            <Position X="-1.5" Y="0" Z="0"/>
+            <Scale X="0.5" Y="1" Z="0.85000002"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Transform>
+        <Children Size="0"/>
+    </Child1>
+    <Child2 Name="Lleg" Visible="true" ObType="1">
+        <Mesh File="meshLL.mesh"/>
+        <Shader File="6.Cube.hlsl"/>
+        <Material File="lleg.mtl"/>
+        <Transform>
+            <Position X="-0.5" Y="-2" Z="0"/>
+            <Scale X="0.5" Y="1" Z="1"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Transform>
+        <Children Size="0"/>
+    </Child2>
+    <Child3 Name="RArm" Visible="true" ObType="1">
+        <Mesh File="meshRA.mesh"/>
+        <Shader File="6.Cube.hlsl"/>
+        <Material File="rarm.mtl"/>
+        <Transform>
+            <Position X="1.5" Y="0" Z="0"/>
+            <Scale X="0.5" Y="1" Z="0.85000002"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Transform>
+        <Children Size="0"/>
+    </Child3>
+    <Child4 Name="Rleg" Visible="true" ObType="1">
+        <Mesh File="meshRL.mesh"/>
+        <Shader File="6.Cube.hlsl"/>
+        <Material File="rleg.mtl"/>
+        <Transform>
+            <Position X="0.5" Y="-1.9999993" Z="0"/>
+            <Scale X="0.5" Y="1" Z="1"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Transform>
+        <Children Size="0"/>
+    </Child4>
+</Root>

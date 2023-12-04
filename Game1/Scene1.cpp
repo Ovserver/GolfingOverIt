@@ -132,7 +132,7 @@ void Scene1::Update()
 
 	if (INPUT->KeyDown('R'))
 	{
-		PHYSICS->InitSpherePhysics(Vector3(0, 2.5f, 0));
+		PHYSICS->InitSpherePhysics(Vector3(0, 3.0f, 0));
 		game_state = GameState::STANDBY;
 		InitToGameStandby();
 	}

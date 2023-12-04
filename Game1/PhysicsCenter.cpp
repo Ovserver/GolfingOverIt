@@ -29,6 +29,8 @@ void PhysicsCenter::InitTerrainInfo(Actor* _terrain)
 			m_WaterList.push_back(temp);
 		if ((temp = g_Terrain->Find("hole" + to_string(i))) && temp->collider)
 			m_HoleList.push_back(temp);
+		if ((temp = g_Terrain->Find("box obj" + to_string(i))) && temp->collider)
+			m_OBGrassList.push_back(temp);
 	}
 }
 

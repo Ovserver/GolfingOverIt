@@ -4,14 +4,14 @@
         <Scale X="1" Y="1" Z="1"/>
         <Rotation X="0" Y="0" Z="0"/>
     </Transform>
-    <Children Size="56"/>
+    <Children Size="58"/>
     <Child0 Name="box0" Visible="true" ObType="0">
         <Mesh File="6.Cube.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Collider ColliderType="0" Visible="true">
             <Position X="0" Y="0" Z="0"/>
-          <Scale X="15" Y="15" Z="15"/>
-          <Rotation X="0" Y="0" Z="0"/>
+            <Scale X="21.299999" Y="21.299999" Z="21.299999"/>
+            <Rotation X="0" Y="0" Z="0"/>
         </Collider>
         <Material File="box.mtl"/>
         <Transform>
@@ -26,8 +26,8 @@
         <Shader File="6.Cube.hlsl"/>
         <Collider ColliderType="0" Visible="true">
             <Position X="0" Y="0" Z="0"/>
-          <Scale X="15" Y="15" Z="15"/>
-          <Rotation X="0" Y="0" Z="0"/>
+            <Scale X="21.299999" Y="21.299999" Z="21.299999"/>
+            <Rotation X="0" Y="0" Z="0"/>
         </Collider>
         <Material File="box.mtl"/>
         <Transform>
@@ -37,71 +37,7 @@
         </Transform>
         <Children Size="0"/>
     </Child1>
-    <Child2 Name="box10" Visible="true" ObType="0">
-        <Mesh File="6.Cube.mesh"/>
-        <Shader File="6.Cube.hlsl"/>
-        <Collider ColliderType="0" Visible="true">
-            <Position X="0" Y="0" Z="0"/>
-          <Scale X="15" Y="15" Z="15"/>
-          <Rotation X="0" Y="0" Z="0"/>
-        </Collider>
-        <Material File="box.mtl"/>
-        <Transform>
-            <Position X="-27" Y="53.450001" Z="1986.9"/>
-            <Scale X="500" Y="15" Z="100"/>
-            <Rotation X="0" Y="0" Z="0"/>
-        </Transform>
-        <Children Size="0"/>
-    </Child2>
-    <Child3 Name="box2" Visible="true" ObType="0">
-        <Mesh File="6.Cube.mesh"/>
-        <Shader File="6.Cube.hlsl"/>
-        <Collider ColliderType="0" Visible="true">
-            <Position X="0" Y="0" Z="0"/>
-          <Scale X="20" Y="20" Z="20"/>
-            <Rotation X="0" Y="0" Z="0"/>
-        </Collider>
-        <Material File="box.mtl"/>
-        <Transform>
-            <Position X="-345" Y="17.6" Z="427.20001"/>
-            <Scale X="20" Y="20" Z="20"/>
-            <Rotation X="0" Y="0" Z="0"/>
-        </Transform>
-        <Children Size="0"/>
-    </Child3>
-    <Child4 Name="box3" Visible="true" ObType="0">
-        <Mesh File="6.Cube.mesh"/>
-        <Shader File="6.Cube.hlsl"/>
-        <Collider ColliderType="0" Visible="true">
-            <Position X="0" Y="0" Z="0"/>
-          <Scale X="20" Y="20" Z="20"/>
-            <Rotation X="0" Y="0" Z="0"/>
-        </Collider>
-        <Material File="box.mtl"/>
-        <Transform>
-            <Position X="-345" Y="17.6" Z="467.20001"/>
-            <Scale X="20" Y="20" Z="20"/>
-            <Rotation X="0" Y="0" Z="0"/>
-        </Transform>
-        <Children Size="0"/>
-    </Child4>
-    <Child5 Name="box4" Visible="true" ObType="0">
-        <Mesh File="6.Cube.mesh"/>
-        <Shader File="6.Cube.hlsl"/>
-        <Collider ColliderType="0" Visible="true">
-            <Position X="0" Y="0" Z="0"/>
-          <Scale X="20" Y="20" Z="20"/>
-            <Rotation X="0" Y="0" Z="0"/>
-        </Collider>
-        <Material File="box.mtl"/>
-        <Transform>
-            <Position X="-345" Y="57.599998" Z="467.20001"/>
-            <Scale X="20" Y="20" Z="20"/>
-            <Rotation X="0" Y="0" Z="0"/>
-        </Transform>
-        <Children Size="0"/>
-    </Child5>
-    <Child6 Name="box5" Visible="true" ObType="0">
+    <Child2 Name="box obj4" Visible="true" ObType="0">
         <Mesh File="6.Cube.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Collider ColliderType="2" Visible="true">
@@ -111,13 +47,109 @@
         </Collider>
         <Material File="box.mtl"/>
         <Transform>
-            <Position X="0" Y="-2.5" Z="687.84998"/>
-            <Scale X="400" Y="40" Z="1"/>
+            <Position X="-27" Y="67" Z="1986.9"/>
+            <Scale X="500" Y="1" Z="100"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Transform>
+        <Children Size="0"/>
+    </Child2>
+    <Child3 Name="box obj5" Visible="true" ObType="1">
+        <Mesh File="6.Cube.mesh"/>
+        <Shader File="6.Cube.hlsl"/>
+        <Collider ColliderType="2" Visible="true">
+            <Position X="0" Y="0" Z="0"/>
+            <Scale X="1" Y="1" Z="1"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Collider>
+        <Material File="box.mtl"/>
+        <Transform>
+            <Position X="0" Y="-32" Z="1887.85"/>
+            <Scale X="500" Y="1" Z="100"/>
+            <Rotation X="-1.5707879" Y="0" Z="0"/>
+        </Transform>
+        <Children Size="0"/>
+    </Child3>
+    <Child4 Name="box12" Visible="true" ObType="1">
+        <Mesh File="6.Cube.mesh"/>
+        <Shader File="6.Cube.hlsl"/>
+        <Collider ColliderType="2" Visible="true">
+            <Position X="0" Y="0" Z="0"/>
+            <Scale X="1" Y="1" Z="1"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Collider>
+        <Material File="box.mtl"/>
+        <Transform>
+            <Position X="0" Y="-32" Z="2093.25"/>
+            <Scale X="500" Y="1" Z="100"/>
+            <Rotation X="1.5707879" Y="0" Z="0"/>
+        </Transform>
+        <Children Size="0"/>
+    </Child4>
+    <Child5 Name="box2" Visible="true" ObType="0">
+        <Mesh File="6.Cube.mesh"/>
+        <Shader File="6.Cube.hlsl"/>
+        <Collider ColliderType="0" Visible="true">
+            <Position X="0" Y="0" Z="0"/>
+            <Scale X="28.450001" Y="28.450001" Z="28.450001"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Collider>
+        <Material File="box.mtl"/>
+        <Transform>
+            <Position X="-345" Y="17.6" Z="427.20001"/>
+            <Scale X="20" Y="20" Z="20"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Transform>
+        <Children Size="0"/>
+    </Child5>
+    <Child6 Name="box3" Visible="true" ObType="0">
+        <Mesh File="6.Cube.mesh"/>
+        <Shader File="6.Cube.hlsl"/>
+        <Collider ColliderType="0" Visible="true">
+            <Position X="0" Y="0" Z="0"/>
+            <Scale X="28.450001" Y="28.450001" Z="28.450001"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Collider>
+        <Material File="box.mtl"/>
+        <Transform>
+            <Position X="-345" Y="17.6" Z="467.20001"/>
+            <Scale X="20" Y="20" Z="20"/>
             <Rotation X="0" Y="0" Z="0"/>
         </Transform>
         <Children Size="0"/>
     </Child6>
-    <Child7 Name="box6" Visible="true" ObType="0">
+    <Child7 Name="box4" Visible="true" ObType="0">
+        <Mesh File="6.Cube.mesh"/>
+        <Shader File="6.Cube.hlsl"/>
+        <Collider ColliderType="0" Visible="true">
+            <Position X="0" Y="0" Z="0"/>
+            <Scale X="28.450001" Y="28.450001" Z="28.450001"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Collider>
+        <Material File="box.mtl"/>
+        <Transform>
+            <Position X="-345" Y="57.599998" Z="467.20001"/>
+            <Scale X="20" Y="20" Z="20"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Transform>
+        <Children Size="0"/>
+    </Child7>
+    <Child8 Name="box5" Visible="true" ObType="0">
+        <Mesh File="6.Cube.mesh"/>
+        <Shader File="6.Cube.hlsl"/>
+        <Collider ColliderType="2" Visible="true">
+            <Position X="0" Y="0" Z="0"/>
+            <Scale X="1" Y="1" Z="1"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Collider>
+        <Material File="box.mtl"/>
+        <Transform>
+            <Position X="-9.3000002" Y="-4.4000001" Z="685.84998"/>
+            <Scale X="40" Y="1" Z="400"/>
+            <Rotation X="0" Y="-1.5707879" Z="-1.5707879"/>
+        </Transform>
+        <Children Size="0"/>
+    </Child8>
+    <Child9 Name="box obj0" Visible="true" ObType="0">
         <Mesh File="6.Cube.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Collider ColliderType="2" Visible="true">
@@ -128,12 +160,12 @@
         <Material File="box.mtl"/>
         <Transform>
             <Position X="0" Y="0" Z="2600"/>
-            <Scale X="200" Y="60" Z="1"/>
-            <Rotation X="0" Y="0" Z="0"/>
+            <Scale X="60" Y="1" Z="200"/>
+            <Rotation X="0" Y="1.5707879" Z="1.5707879"/>
         </Transform>
         <Children Size="0"/>
-    </Child7>
-    <Child8 Name="box7" Visible="true" ObType="0">
+    </Child9>
+    <Child10 Name="box obj1" Visible="true" ObType="0">
         <Mesh File="6.Cube.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Collider ColliderType="2" Visible="true">
@@ -144,12 +176,12 @@
         <Material File="box.mtl"/>
         <Transform>
             <Position X="199" Y="0" Z="2400"/>
-            <Scale X="200" Y="60" Z="1"/>
-            <Rotation X="0" Y="1.5707879" Z="0"/>
+            <Scale X="60" Y="1" Z="200"/>
+            <Rotation X="0" Y="0" Z="-1.5707879"/>
         </Transform>
         <Children Size="0"/>
-    </Child8>
-    <Child9 Name="box8" Visible="true" ObType="0">
+    </Child10>
+    <Child11 Name="box obj2" Visible="true" ObType="0">
         <Mesh File="6.Cube.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Collider ColliderType="2" Visible="true">
@@ -160,12 +192,12 @@
         <Material File="box.mtl"/>
         <Transform>
             <Position X="0" Y="0" Z="2200"/>
-            <Scale X="200" Y="60" Z="1"/>
-            <Rotation X="0" Y="0" Z="0"/>
+            <Scale X="60" Y="1" Z="200"/>
+            <Rotation X="0" Y="-1.5707879" Z="1.5707879"/>
         </Transform>
         <Children Size="0"/>
-    </Child9>
-    <Child10 Name="box9" Visible="true" ObType="0">
+    </Child11>
+    <Child12 Name="box obj3" Visible="true" ObType="0">
         <Mesh File="6.Cube.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Collider ColliderType="2" Visible="true">
@@ -176,12 +208,12 @@
         <Material File="box.mtl"/>
         <Transform>
             <Position X="-199" Y="0" Z="2400"/>
-            <Scale X="200" Y="60" Z="1"/>
-            <Rotation X="0" Y="1.5707879" Z="0"/>
+            <Scale X="60" Y="1" Z="200"/>
+            <Rotation X="0" Y="0" Z="1.5707879"/>
         </Transform>
         <Children Size="0"/>
-    </Child10>
-    <Child11 Name="flag" Visible="true" ObType="0">
+    </Child12>
+    <Child13 Name="flag" Visible="true" ObType="0">
         <Mesh File="6.Sphere.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Collider ColliderType="0" Visible="true">
@@ -212,8 +244,8 @@
             </Transform>
             <Children Size="0"/>
         </Child0>
-    </Child11>
-    <Child12 Name="grass0" Visible="true" ObType="0">
+    </Child13>
+    <Child14 Name="grass0" Visible="true" ObType="0">
         <Mesh File="grass.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Collider ColliderType="2" Visible="true">
@@ -228,8 +260,8 @@
             <Rotation X="0" Y="0" Z="0"/>
         </Transform>
         <Children Size="0"/>
-    </Child12>
-    <Child13 Name="grass1" Visible="true" ObType="0">
+    </Child14>
+    <Child15 Name="grass1" Visible="true" ObType="0">
         <Mesh File="grass.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Collider ColliderType="2" Visible="true">
@@ -244,8 +276,8 @@
             <Rotation X="0" Y="0" Z="0"/>
         </Transform>
         <Children Size="0"/>
-    </Child13>
-    <Child14 Name="grass2" Visible="true" ObType="0">
+    </Child15>
+    <Child16 Name="grass2" Visible="true" ObType="0">
         <Mesh File="grass.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Collider ColliderType="2" Visible="true">
@@ -260,8 +292,8 @@
             <Rotation X="0" Y="0" Z="0"/>
         </Transform>
         <Children Size="0"/>
-    </Child14>
-    <Child15 Name="grass3" Visible="true" ObType="0">
+    </Child16>
+    <Child17 Name="grass3" Visible="true" ObType="0">
         <Mesh File="grass.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Collider ColliderType="2" Visible="true">
@@ -276,8 +308,8 @@
             <Rotation X="0" Y="0" Z="0"/>
         </Transform>
         <Children Size="0"/>
-    </Child15>
-    <Child16 Name="grass4" Visible="true" ObType="0">
+    </Child17>
+    <Child18 Name="grass4" Visible="true" ObType="0">
         <Mesh File="grass.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Collider ColliderType="2" Visible="true">
@@ -292,13 +324,13 @@
             <Rotation X="-0.41800413" Y="0" Z="0"/>
         </Transform>
         <Children Size="0"/>
-    </Child16>
-    <Child17 Name="grass5" Visible="true" ObType="0">
+    </Child18>
+    <Child19 Name="grass5" Visible="true" ObType="0">
         <Mesh File="6.Cube.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Collider ColliderType="2" Visible="true">
             <Position X="0" Y="0" Z="0"/>
-          <Scale X="1" Y="1" Z="1"/>
+            <Scale X="1" Y="1" Z="1"/>
             <Rotation X="0" Y="0" Z="0"/>
         </Collider>
         <Material File="grass.mtl"/>
@@ -308,8 +340,8 @@
             <Rotation X="0" Y="0" Z="0"/>
         </Transform>
         <Children Size="0"/>
-    </Child17>
-    <Child18 Name="grass6" Visible="true" ObType="0">
+    </Child19>
+    <Child20 Name="grass6" Visible="true" ObType="0">
         <Mesh File="grass.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Collider ColliderType="2" Visible="true">
@@ -324,8 +356,8 @@
             <Rotation X="0" Y="0" Z="0"/>
         </Transform>
         <Children Size="0"/>
-    </Child18>
-    <Child19 Name="hole0" Visible="true" ObType="0">
+    </Child20>
+    <Child21 Name="hole0" Visible="true" ObType="0">
         <Mesh File="6.Sphere.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Collider ColliderType="0" Visible="true">
@@ -340,13 +372,13 @@
             <Rotation X="0" Y="-1.1894356" Z="0"/>
         </Transform>
         <Children Size="0"/>
-    </Child19>
-    <Child20 Name="leaf0" Visible="true" ObType="0">
+    </Child21>
+    <Child22 Name="leaf0" Visible="true" ObType="0">
         <Mesh File="6.Sphere.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Collider ColliderType="0" Visible="true">
             <Position X="0" Y="0" Z="0"/>
-          <Scale X="20" Y="20" Z="20"/>
+            <Scale X="20" Y="20" Z="20"/>
             <Rotation X="0" Y="0" Z="0"/>
         </Collider>
         <Material File="leaf.mtl"/>
@@ -356,13 +388,13 @@
             <Rotation X="0" Y="0" Z="0"/>
         </Transform>
         <Children Size="0"/>
-    </Child20>
-    <Child21 Name="leaf1" Visible="true" ObType="0">
+    </Child22>
+    <Child23 Name="leaf1" Visible="true" ObType="0">
         <Mesh File="6.Sphere.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Collider ColliderType="0" Visible="true">
             <Position X="0" Y="0" Z="0"/>
-          <Scale X="20" Y="20" Z="20"/>
+            <Scale X="20" Y="20" Z="20"/>
             <Rotation X="0" Y="0" Z="0"/>
         </Collider>
         <Material File="leaf.mtl"/>
@@ -372,13 +404,13 @@
             <Rotation X="0" Y="0" Z="0"/>
         </Transform>
         <Children Size="0"/>
-    </Child21>
-    <Child22 Name="leaf2" Visible="true" ObType="0">
+    </Child23>
+    <Child24 Name="leaf2" Visible="true" ObType="0">
         <Mesh File="6.Sphere.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Collider ColliderType="0" Visible="true">
             <Position X="0" Y="0" Z="0"/>
-          <Scale X="20" Y="20" Z="20"/>
+            <Scale X="20" Y="20" Z="20"/>
             <Rotation X="0" Y="0" Z="0"/>
         </Collider>
         <Material File="leaf.mtl"/>
@@ -388,13 +420,13 @@
             <Rotation X="0" Y="0" Z="0"/>
         </Transform>
         <Children Size="0"/>
-    </Child22>
-    <Child23 Name="leaf3" Visible="true" ObType="0">
+    </Child24>
+    <Child25 Name="leaf3" Visible="true" ObType="0">
         <Mesh File="6.Sphere.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Collider ColliderType="0" Visible="true">
             <Position X="0" Y="0" Z="0"/>
-          <Scale X="20" Y="20" Z="20"/>
+            <Scale X="20" Y="20" Z="20"/>
             <Rotation X="0" Y="0" Z="0"/>
         </Collider>
         <Material File="leaf.mtl"/>
@@ -404,13 +436,13 @@
             <Rotation X="0" Y="0" Z="0"/>
         </Transform>
         <Children Size="0"/>
-    </Child23>
-    <Child24 Name="leaf4" Visible="true" ObType="0">
+    </Child25>
+    <Child26 Name="leaf4" Visible="true" ObType="0">
         <Mesh File="6.Sphere.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Collider ColliderType="0" Visible="true">
             <Position X="0" Y="0" Z="0"/>
-          <Scale X="20" Y="20" Z="20"/>
+            <Scale X="20" Y="20" Z="20"/>
             <Rotation X="0" Y="0" Z="0"/>
         </Collider>
         <Material File="leaf.mtl"/>
@@ -420,13 +452,13 @@
             <Rotation X="0" Y="0" Z="0"/>
         </Transform>
         <Children Size="0"/>
-    </Child24>
-    <Child25 Name="leaf5" Visible="true" ObType="0">
+    </Child26>
+    <Child27 Name="leaf5" Visible="true" ObType="0">
         <Mesh File="6.Sphere.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Collider ColliderType="0" Visible="true">
             <Position X="0" Y="0" Z="0"/>
-          <Scale X="20" Y="20" Z="20"/>
+            <Scale X="20" Y="20" Z="20"/>
             <Rotation X="0" Y="0" Z="0"/>
         </Collider>
         <Material File="leaf.mtl"/>
@@ -436,13 +468,13 @@
             <Rotation X="0" Y="0" Z="0"/>
         </Transform>
         <Children Size="0"/>
-    </Child25>
-    <Child26 Name="leaf6" Visible="true" ObType="0">
+    </Child27>
+    <Child28 Name="leaf6" Visible="true" ObType="0">
         <Mesh File="6.Sphere.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Collider ColliderType="0" Visible="true">
             <Position X="0" Y="0" Z="0"/>
-          <Scale X="20" Y="20" Z="20"/>
+            <Scale X="20" Y="20" Z="20"/>
             <Rotation X="0" Y="0" Z="0"/>
         </Collider>
         <Material File="leaf.mtl"/>
@@ -452,8 +484,8 @@
             <Rotation X="0" Y="0" Z="0"/>
         </Transform>
         <Children Size="0"/>
-    </Child26>
-    <Child27 Name="obstacle grass0" Visible="true" ObType="0">
+    </Child28>
+    <Child29 Name="obstacle grass0" Visible="true" ObType="0">
         <Mesh File="obstacle grass.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Collider ColliderType="2" Visible="true">
@@ -468,8 +500,8 @@
             <Rotation X="0" Y="0" Z="0"/>
         </Transform>
         <Children Size="0"/>
-    </Child27>
-    <Child28 Name="obstacle grass1" Visible="true" ObType="0">
+    </Child29>
+    <Child30 Name="obstacle grass1" Visible="true" ObType="0">
         <Mesh File="obstacle grass.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Collider ColliderType="2" Visible="true">
@@ -484,8 +516,8 @@
             <Rotation X="0" Y="0" Z="0"/>
         </Transform>
         <Children Size="0"/>
-    </Child28>
-    <Child29 Name="obstacle grass2" Visible="true" ObType="0">
+    </Child30>
+    <Child31 Name="obstacle grass2" Visible="true" ObType="0">
         <Mesh File="obstacle grass.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Collider ColliderType="2" Visible="true">
@@ -500,8 +532,8 @@
             <Rotation X="0" Y="0" Z="0"/>
         </Transform>
         <Children Size="0"/>
-    </Child29>
-    <Child30 Name="obstacle grass3" Visible="true" ObType="0">
+    </Child31>
+    <Child32 Name="obstacle grass3" Visible="true" ObType="0">
         <Mesh File="6.Sphere.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Collider ColliderType="2" Visible="true">
@@ -516,8 +548,8 @@
             <Rotation X="0" Y="6.2831516" Z="6.423615"/>
         </Transform>
         <Children Size="0"/>
-    </Child30>
-    <Child31 Name="obstacle grass4" Visible="true" ObType="0">
+    </Child32>
+    <Child33 Name="obstacle grass4" Visible="true" ObType="0">
         <Mesh File="6.Sphere.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Collider ColliderType="2" Visible="true">
@@ -532,8 +564,8 @@
             <Rotation X="0" Y="4.7123637" Z="-1.4076005"/>
         </Transform>
         <Children Size="0"/>
-    </Child31>
-    <Child32 Name="obstacle grass5" Visible="true" ObType="0">
+    </Child33>
+    <Child34 Name="obstacle grass5" Visible="true" ObType="0">
         <Mesh File="6.Sphere.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Collider ColliderType="2" Visible="true">
@@ -548,8 +580,8 @@
             <Rotation X="0" Y="-3.1415758" Z="6.423615"/>
         </Transform>
         <Children Size="0"/>
-    </Child32>
-    <Child33 Name="obstacle grass6" Visible="true" ObType="0">
+    </Child34>
+    <Child35 Name="obstacle grass6" Visible="true" ObType="0">
         <Mesh File="6.Sphere.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Collider ColliderType="2" Visible="true">
@@ -564,8 +596,8 @@
             <Rotation X="0" Y="1.5707879" Z="0.27752331"/>
         </Transform>
         <Children Size="0"/>
-    </Child33>
-    <Child34 Name="obstacle grass7" Visible="true" ObType="0">
+    </Child35>
+    <Child36 Name="obstacle grass7" Visible="true" ObType="0">
         <Mesh File="6.Sphere.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Collider ColliderType="2" Visible="true">
@@ -580,24 +612,104 @@
             <Rotation X="0" Y="7.8539395" Z="-0.72692579"/>
         </Transform>
         <Children Size="0"/>
-    </Child34>
-    <Child35 Name="obstacle grass8" Visible="true" ObType="0">
+    </Child36>
+    <Child37 Name="water2" Visible="true" ObType="0">
         <Mesh File="obstacle grass.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Collider ColliderType="2" Visible="true">
             <Position X="0" Y="0" Z="0"/>
-            <Scale X="0" Y="0" Z="0"/>
+            <Scale X="1" Y="1" Z="1"/>
             <Rotation X="0" Y="0" Z="0"/>
         </Collider>
         <Material File="obstacle grass.mtl"/>
         <Transform>
-            <Position X="0" Y="-3" Z="0"/>
+            <Position X="0" Y="-30" Z="0"/>
             <Scale X="5000" Y="0" Z="5000"/>
             <Rotation X="0" Y="0" Z="0"/>
         </Transform>
         <Children Size="0"/>
-    </Child35>
-    <Child36 Name="rock0" Visible="true" ObType="0">
+    </Child37>
+    <Child38 Name="rock0" Visible="true" ObType="0">
+        <Mesh File="6.Sphere.mesh"/>
+        <Shader File="6.Cube.hlsl"/>
+        <Collider ColliderType="0" Visible="true">
+            <Position X="0" Y="0" Z="0"/>
+            <Scale X="34.299999" Y="34.299999" Z="34.299999"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Collider>
+        <Material File="rock.mtl"/>
+        <Transform>
+            <Position X="286.60001" Y="10.55" Z="413.29999"/>
+            <Scale X="34.299999" Y="34.299999" Z="34.299999"/>
+            <Rotation X="-0.052359592" Y="-0.60737133" Z="-0.78364867"/>
+        </Transform>
+        <Children Size="0"/>
+    </Child38>
+    <Child39 Name="rock1" Visible="true" ObType="0">
+        <Mesh File="6.Sphere.mesh"/>
+        <Shader File="6.Cube.hlsl"/>
+        <Collider ColliderType="0" Visible="true">
+            <Position X="0" Y="0" Z="0"/>
+            <Scale X="34.299999" Y="34.299999" Z="34.299999"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Collider>
+        <Material File="rock.mtl"/>
+        <Transform>
+            <Position X="318.70001" Y="26.65" Z="462.39999"/>
+            <Scale X="34.299999" Y="34.299999" Z="34.299999"/>
+            <Rotation X="0" Y="0.33946469" Z="-1.1178775"/>
+        </Transform>
+        <Children Size="0"/>
+    </Child39>
+    <Child40 Name="rock10" Visible="true" ObType="0">
+        <Mesh File="6.Sphere.mesh"/>
+        <Shader File="6.Cube.hlsl"/>
+        <Collider ColliderType="0" Visible="true">
+            <Position X="0" Y="0" Z="0"/>
+            <Scale X="48.049999" Y="48.049999" Z="48.049999"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Collider>
+        <Material File="rock.mtl"/>
+        <Transform>
+            <Position X="173.2" Y="13.7" Z="871.29999"/>
+            <Scale X="48.049999" Y="48.049999" Z="48.049999"/>
+            <Rotation X="0.67369348" Y="0.20332977" Z="0.12217239"/>
+        </Transform>
+        <Children Size="0"/>
+    </Child40>
+    <Child41 Name="rock11" Visible="true" ObType="0">
+        <Mesh File="6.Sphere.mesh"/>
+        <Shader File="6.Cube.hlsl"/>
+        <Collider ColliderType="0" Visible="true">
+            <Position X="0" Y="0" Z="0"/>
+            <Scale X="51.75" Y="51.75" Z="51.75"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Collider>
+        <Material File="rock.mtl"/>
+        <Transform>
+            <Position X="243.85001" Y="13.4" Z="881.25"/>
+            <Scale X="51.75" Y="51.75" Z="51.75"/>
+            <Rotation X="0.87440526" Y="-0.13002633" Z="-0.46512777"/>
+        </Transform>
+        <Children Size="0"/>
+    </Child41>
+    <Child42 Name="rock2" Visible="true" ObType="0">
+        <Mesh File="6.Sphere.mesh"/>
+        <Shader File="6.Cube.hlsl"/>
+        <Collider ColliderType="0" Visible="true">
+            <Position X="0" Y="0" Z="0"/>
+            <Scale X="34.299999" Y="34.299999" Z="34.299999"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Collider>
+        <Material File="rock.mtl"/>
+        <Transform>
+            <Position X="282.20001" Y="30.549999" Z="468.85001"/>
+            <Scale X="34.299999" Y="34.299999" Z="34.299999"/>
+            <Rotation X="-0.45814648" Y="0.081157379" Z="-0.034033738"/>
+        </Transform>
+        <Children Size="0"/>
+    </Child42>
+    <Child43 Name="rock3" Visible="true" ObType="0">
         <Mesh File="6.Sphere.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Collider ColliderType="0" Visible="true">
@@ -607,189 +719,109 @@
         </Collider>
         <Material File="rock.mtl"/>
         <Transform>
-            <Position X="286.60001" Y="10.55" Z="413.29999"/>
-            <Scale X="22.35" Y="24.6" Z="40.549999"/>
-            <Rotation X="-0.052359592" Y="-0.60737133" Z="-0.78364867"/>
-        </Transform>
-        <Children Size="0"/>
-    </Child36>
-    <Child37 Name="rock1" Visible="true" ObType="0">
-        <Mesh File="6.Sphere.mesh"/>
-        <Shader File="6.Cube.hlsl"/>
-        <Collider ColliderType="0" Visible="true">
-            <Position X="0" Y="0" Z="0"/>
-            <Scale X="318" Y="318" Z="318"/>
-            <Rotation X="0" Y="0" Z="0"/>
-        </Collider>
-        <Material File="rock.mtl"/>
-        <Transform>
-            <Position X="318.70001" Y="26.65" Z="462.39999"/>
-            <Scale X="19.6" Y="29.5" Z="44.75"/>
-            <Rotation X="0" Y="0.33946469" Z="-1.1178775"/>
-        </Transform>
-        <Children Size="0"/>
-    </Child37>
-    <Child38 Name="rock10" Visible="true" ObType="0">
-        <Mesh File="6.Sphere.mesh"/>
-        <Shader File="6.Cube.hlsl"/>
-        <Collider ColliderType="0" Visible="true">
-            <Position X="0" Y="0" Z="0"/>
-            <Scale X="48" Y="48" Z="48"/>
-            <Rotation X="0" Y="0" Z="0"/>
-        </Collider>
-        <Material File="rock.mtl"/>
-        <Transform>
-            <Position X="173.2" Y="13.7" Z="871.29999"/>
-            <Scale X="48.049999" Y="34.450001" Z="29.6"/>
-            <Rotation X="0.67369348" Y="0.20332977" Z="0.12217239"/>
-        </Transform>
-        <Children Size="0"/>
-    </Child38>
-    <Child39 Name="rock11" Visible="true" ObType="0">
-        <Mesh File="6.Sphere.mesh"/>
-        <Shader File="6.Cube.hlsl"/>
-        <Collider ColliderType="0" Visible="true">
-            <Position X="0" Y="0" Z="0"/>
-            <Scale X="51" Y="51" Z="51"/>
-            <Rotation X="0" Y="0" Z="0"/>
-        </Collider>
-        <Material File="rock.mtl"/>
-        <Transform>
-            <Position X="243.85001" Y="13.4" Z="881.25"/>
-            <Scale X="51.75" Y="35.299999" Z="25.35"/>
-            <Rotation X="0.87440526" Y="-0.13002633" Z="-0.46512777"/>
-        </Transform>
-        <Children Size="0"/>
-    </Child39>
-    <Child40 Name="rock2" Visible="true" ObType="0">
-        <Mesh File="6.Sphere.mesh"/>
-        <Shader File="6.Cube.hlsl"/>
-        <Collider ColliderType="0" Visible="true">
-            <Position X="0" Y="0" Z="0"/>
-            <Scale X="1" Y="1" Z="1"/>
-            <Rotation X="0" Y="0" Z="0"/>
-        </Collider>
-        <Material File="rock.mtl"/>
-        <Transform>
-            <Position X="282.20001" Y="30.549999" Z="468.85001"/>
-            <Scale X="24" Y="15.7" Z="31.4"/>
-            <Rotation X="-0.45814648" Y="0.081157379" Z="-0.034033738"/>
-        </Transform>
-        <Children Size="0"/>
-    </Child40>
-    <Child41 Name="rock3" Visible="true" ObType="0">
-        <Mesh File="6.Sphere.mesh"/>
-        <Shader File="6.Cube.hlsl"/>
-        <Collider ColliderType="0" Visible="true">
-            <Position X="0" Y="0" Z="0"/>
-            <Scale X="1" Y="1" Z="1"/>
-            <Rotation X="0" Y="0" Z="0"/>
-        </Collider>
-        <Material File="rock.mtl"/>
-        <Transform>
             <Position X="-350.25" Y="51.75" Z="568.45001"/>
-            <Scale X="40" Y="40" Z="50"/>
+            <Scale X="40" Y="40" Z="40"/>
             <Rotation X="-0.071558118" Y="0.515742" Z="4.8415174"/>
         </Transform>
         <Children Size="0"/>
-    </Child41>
-    <Child42 Name="rock4" Visible="true" ObType="0">
+    </Child43>
+    <Child44 Name="rock4" Visible="true" ObType="0">
         <Mesh File="6.Sphere.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Collider ColliderType="0" Visible="true">
             <Position X="0" Y="0" Z="0"/>
-            <Scale X="1" Y="1" Z="1"/>
+            <Scale X="50" Y="50" Z="50"/>
             <Rotation X="0" Y="0" Z="0"/>
         </Collider>
         <Material File="rock.mtl"/>
         <Transform>
-            <Position X="-285.39999" Y="3.8" Z="872.75"/>
-            <Scale X="47.75" Y="31.5" Z="28.85"/>
+            <Position X="-285.39999" Y="1.7" Z="872.75"/>
+            <Scale X="50" Y="50" Z="50"/>
             <Rotation X="0.81680971" Y="-0.10297388" Z="-0.23387286"/>
         </Transform>
         <Children Size="0"/>
-    </Child42>
-    <Child43 Name="rock5" Visible="true" ObType="0">
+    </Child44>
+    <Child45 Name="rock5" Visible="true" ObType="0">
         <Mesh File="6.Sphere.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Collider ColliderType="0" Visible="true">
             <Position X="0" Y="0" Z="0"/>
-            <Scale X="1" Y="1" Z="1"/>
+            <Scale X="49.349998" Y="49.349998" Z="49.349998"/>
             <Rotation X="0" Y="0" Z="0"/>
         </Collider>
         <Material File="rock.mtl"/>
         <Transform>
             <Position X="-214.55" Y="6.6999998" Z="875.20001"/>
-            <Scale X="49.349998" Y="29" Z="24.700001"/>
+            <Scale X="49.349998" Y="49.349998" Z="49.349998"/>
             <Rotation X="0.4424386" Y="-0.33684674" Z="-0.59777206"/>
         </Transform>
         <Children Size="0"/>
-    </Child43>
-    <Child44 Name="rock6" Visible="true" ObType="0">
+    </Child45>
+    <Child46 Name="rock6" Visible="true" ObType="0">
         <Mesh File="6.Sphere.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Collider ColliderType="0" Visible="true">
             <Position X="0" Y="0" Z="0"/>
-            <Scale X="1" Y="1" Z="1"/>
+            <Scale X="66.099998" Y="66.099998" Z="66.099998"/>
             <Rotation X="0" Y="0" Z="0"/>
         </Collider>
         <Material File="rock.mtl"/>
         <Transform>
             <Position X="-125.1" Y="17.25" Z="884.59998"/>
-            <Scale X="66.099998" Y="44.299999" Z="27"/>
+            <Scale X="66.099998" Y="66.099998" Z="66.099998"/>
             <Rotation X="0.50527012" Y="0" Z="0.39095166"/>
         </Transform>
         <Children Size="0"/>
-    </Child44>
-    <Child45 Name="rock7" Visible="true" ObType="0">
+    </Child46>
+    <Child47 Name="rock7" Visible="true" ObType="0">
         <Mesh File="6.Sphere.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Collider ColliderType="0" Visible="true">
             <Position X="0" Y="0" Z="0"/>
-            <Scale X="1" Y="1" Z="1"/>
+            <Scale X="54.200001" Y="54.200001" Z="54.200001"/>
             <Rotation X="0" Y="0" Z="0"/>
         </Collider>
         <Material File="rock.mtl"/>
         <Transform>
             <Position X="-45.849998" Y="13.45" Z="869.15002"/>
-            <Scale X="54.200001" Y="43.400002" Z="28.75"/>
+            <Scale X="54.200001" Y="54.200001" Z="54.200001"/>
             <Rotation X="0.34644601" Y="-0.0087265996" Z="-0.57333755"/>
         </Transform>
         <Children Size="0"/>
-    </Child45>
-    <Child46 Name="rock8" Visible="true" ObType="0">
+    </Child47>
+    <Child48 Name="rock8" Visible="true" ObType="0">
         <Mesh File="6.Sphere.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Collider ColliderType="0" Visible="true">
             <Position X="0" Y="0" Z="0"/>
-            <Scale X="1" Y="1" Z="1"/>
+            <Scale X="60.049999" Y="60.049999" Z="60.049999"/>
             <Rotation X="0" Y="0" Z="0"/>
         </Collider>
         <Material File="rock.mtl"/>
         <Transform>
             <Position X="42.400002" Y="6.25" Z="868.95001"/>
-            <Scale X="60.049999" Y="43.049999" Z="24.85"/>
+            <Scale X="60.049999" Y="60.049999" Z="60.049999"/>
             <Rotation X="0.86393338" Y="-0.21467435" Z="0"/>
         </Transform>
         <Children Size="0"/>
-    </Child46>
-    <Child47 Name="rock9" Visible="true" ObType="0">
+    </Child48>
+    <Child49 Name="rock9" Visible="true" ObType="0">
         <Mesh File="6.Sphere.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Collider ColliderType="0" Visible="true">
             <Position X="0" Y="0" Z="0"/>
-            <Scale X="1" Y="1" Z="1"/>
+            <Scale X="37.150002" Y="37.150002" Z="37.150002"/>
             <Rotation X="0" Y="0" Z="0"/>
         </Collider>
         <Material File="rock.mtl"/>
         <Transform>
             <Position X="105.95" Y="13.15" Z="873.90002"/>
-            <Scale X="37.150002" Y="30.6" Z="52.400002"/>
+            <Scale X="37.150002" Y="37.150002" Z="37.150002"/>
             <Rotation X="0.3726258" Y="-1.8439305" Z="-0.14398889"/>
         </Transform>
         <Children Size="0"/>
-    </Child47>
-    <Child48 Name="snad0" Visible="true" ObType="0">
+    </Child49>
+    <Child50 Name="snad0" Visible="true" ObType="0">
         <Mesh File="water.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Collider ColliderType="2" Visible="true">
@@ -804,8 +836,8 @@
             <Rotation X="0" Y="0" Z="0"/>
         </Transform>
         <Children Size="0"/>
-    </Child48>
-    <Child49 Name="snad1" Visible="true" ObType="0">
+    </Child50>
+    <Child51 Name="snad1" Visible="true" ObType="0">
         <Mesh File="6.Sphere.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Collider ColliderType="2" Visible="true">
@@ -820,8 +852,8 @@
             <Rotation X="-2.6755755" Y="0" Z="3.1415758"/>
         </Transform>
         <Children Size="0"/>
-    </Child49>
-    <Child50 Name="snad2" Visible="true" ObType="0">
+    </Child51>
+    <Child52 Name="snad2" Visible="true" ObType="0">
         <Mesh File="6.Sphere.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Collider ColliderType="2" Visible="true">
@@ -836,8 +868,8 @@
             <Rotation X="0.49828884" Y="4.7123637" Z="0"/>
         </Transform>
         <Children Size="0"/>
-    </Child50>
-    <Child51 Name="snad3" Visible="true" ObType="0">
+    </Child52>
+    <Child53 Name="snad3" Visible="true" ObType="0">
         <Mesh File="6.Sphere.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Collider ColliderType="2" Visible="true">
@@ -852,8 +884,8 @@
             <Rotation X="0" Y="0" Z="-0.28885043"/>
         </Transform>
         <Children Size="0"/>
-    </Child51>
-    <Child52 Name="snad4" Visible="true" ObType="0">
+    </Child53>
+    <Child54 Name="snad4" Visible="true" ObType="0">
         <Mesh File="6.Sphere.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Collider ColliderType="2" Visible="true">
@@ -868,8 +900,8 @@
             <Rotation X="0" Y="-1.5707879" Z="0.26703396"/>
         </Transform>
         <Children Size="0"/>
-    </Child52>
-    <Child53 Name="tree0" Visible="true" ObType="0">
+    </Child54>
+    <Child55 Name="tree0" Visible="true" ObType="0">
         <Mesh File="6.Sphere.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Collider ColliderType="2" Visible="true">
@@ -884,8 +916,8 @@
             <Rotation X="0" Y="0" Z="0"/>
         </Transform>
         <Children Size="0"/>
-    </Child53>
-    <Child54 Name="water0" Visible="true" ObType="0">
+    </Child55>
+    <Child56 Name="water0" Visible="true" ObType="0">
         <Mesh File="water.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Collider ColliderType="2" Visible="true">
@@ -900,8 +932,8 @@
             <Rotation X="0" Y="0" Z="0"/>
         </Transform>
         <Children Size="0"/>
-    </Child54>
-    <Child55 Name="water1" Visible="true" ObType="0">
+    </Child56>
+    <Child57 Name="water1" Visible="true" ObType="0">
         <Mesh File="water.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Collider ColliderType="2" Visible="true">
@@ -916,5 +948,5 @@
             <Rotation X="0" Y="0" Z="0"/>
         </Transform>
         <Children Size="0"/>
-    </Child55>
+    </Child57>
 </Root>
