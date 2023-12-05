@@ -83,6 +83,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GameObject", "GameObject", 
 		Contents\GameObject\Grid.xml = Contents\GameObject\Grid.xml
 		Contents\GameObject\handinhand.xml = Contents\GameObject\handinhand.xml
 		Contents\GameObject\Human.xml = Contents\GameObject\Human.xml
+		Contents\GameObject\Human1.xml = Contents\GameObject\Human1.xml
 		Contents\GameObject\Paper.xml = Contents\GameObject\Paper.xml
 		Contents\GameObject\Rect.xml = Contents\GameObject\Rect.xml
 		Contents\GameObject\Rock.xml = Contents\GameObject\Rock.xml

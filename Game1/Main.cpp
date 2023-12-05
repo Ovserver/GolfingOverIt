@@ -51,7 +51,7 @@ void Main::Render()
 void Main::ResizeScreen()
 {
 
-    SCENE->ResizeScreen();
+    //SCENE->ResizeScreen();
    
 }
 

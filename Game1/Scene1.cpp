@@ -22,7 +22,7 @@ Scene1::Scene1()
 	skybox->LoadFile("sky.xml");
 
 	player = Actor::Create();
-	player->LoadFile("RunHuman.xml");
+	player->LoadFile("Human1.xml");
 	player->Update();
 	pos_player_init = player->GetWorldPos();
 
@@ -41,18 +41,34 @@ Scene1::Scene1()
 	objects->LoadFile("test_objects.xml");
 
 	ui_ball_nav = Actor::Create();
+	ui_ball_nav->LoadFile("UI_minimap_ball.xml");
+
+	ui_minimap = Actor::Create();
+	ui_minimap->LoadFile("UI_minimap.xml");
 
 	ui_pannel_minimap = UI::Create();
 	ui_pannel_minimap->LoadFile("UI_pannel_minimap.xml");
+	ui_pannel_minimap->Update();
+	origin_ui_minimap_size.x = ui_pannel_minimap->GetWorldPos().x;
+	origin_ui_minimap_size.y = ui_pannel_minimap->GetWorldPos().y;
+	origin_ui_minimap_size.z = ui_pannel_minimap->scale.x;
+	origin_ui_minimap_size.w = ui_pannel_minimap->scale.y;
 
 	ui_pannel_hole_count = UI::Create();
 	ui_pannel_hole_count->LoadFile("UI_pannel_holecount.xml");
+
+	origin_ui_hole_count_size.x = ui_pannel_hole_count->GetWorldPos().x;
+	origin_ui_hole_count_size.y = ui_pannel_hole_count->GetWorldPos().y;
+	origin_ui_hole_count_size.z = ui_pannel_hole_count->scale.x;
+	origin_ui_hole_count_size.w = ui_pannel_hole_count->scale.y;
 
 	ui_pannel_power_gauge = UI::Create();
 	ui_pannel_power_gauge->LoadFile("UI_pannel_gauge.xml");
 
 	ui_power_gauge = UI::Create();
 	ui_power_gauge->LoadFile("UI_gauge.xml");
+	ui_clear_image = UI::Create();
+	ui_clear_image->LoadFile("UI_clear_image.xml");
 
 	test_gauge_h = UI::Create();
 	test_gauge_h->LoadFile("test_ui.xml");
@@ -68,7 +84,7 @@ Scene1::Scene1()
 	cam_main->Update();
 	game_state = GameState::STANDBY;
 
-
+	ViewCollider(false);
 }
 Scene1::~Scene1()
 {
@@ -82,10 +98,12 @@ Scene1::~Scene1()
 	terrain->Release();
 	objects->Release();
 	ui_ball_nav->Release();
+	ui_minimap->Release();
 	ui_pannel_minimap->Release();
 	ui_pannel_hole_count->Release();
 	ui_pannel_power_gauge->Release();
 	ui_power_gauge->Release();
+	ui_clear_image->Release();
 	test_gauge_h->Release();
 	test_gauge_v->Release();
 }
@@ -117,10 +135,12 @@ void Scene1::Update()
 	arrow_dir->RenderHierarchy();
 	objects->RenderHierarchy();
 	ui_ball_nav->RenderHierarchy();
+	ui_minimap->RenderHierarchy();
 	ui_pannel_minimap->RenderHierarchy();
 	ui_pannel_hole_count->RenderHierarchy();
 	ui_pannel_power_gauge->RenderHierarchy();
 	ui_power_gauge->RenderHierarchy();
+	ui_clear_image->RenderHierarchy();
 	test_gauge_h->RenderHierarchy();
 	test_gauge_v->RenderHierarchy();
 	ImGui::End();
@@ -130,6 +150,10 @@ void Scene1::Update()
 	//메인캠 컨트롤
 	//Camera::main->ControlMainCam();
 
+	if (INPUT->KeyDown(VK_F1)) {
+		view_collider = !view_collider;
+		ViewCollider(view_collider);
+	}
 	if (INPUT->KeyDown('R'))
 	{
 		PHYSICS->InitSpherePhysics(Vector3(0, 3.0f, 0));
@@ -206,19 +230,32 @@ void Scene1::Update()
 		{
 			if (PHYSICS->g_GroundType == GroundType::HOLE)
 				GameClear();
-			else if (PHYSICS->g_GroundType == GroundType::WATER)
-			{
-				ball->SetWorldPos(pos_last_ball);
-				ball->Update();
-				player->SetWorldPos(pos_player_init + ball->GetWorldPos());
-				cam_main->SetWorldPos(ball->GetWorldPos() + Vector3(0, 10, -30));
-			}
 			else
-				player->SetWorldPos(pos_player_init + ball->GetWorldPos());
-			game_state = GameState::STANDBY;
+			{
+				if (PHYSICS->g_GroundType == GroundType::WATER)
+				{
+					ball->SetWorldPos(pos_last_ball);
+					ball->Update();
+					player->SetWorldPos(pos_player_init + ball->GetWorldPos());
+					cam_main->SetWorldPos(ball->GetWorldPos() + Vector3(0, 10, -30));
+				}
+				else
+					player->SetWorldPos(pos_player_init + ball->GetWorldPos());
+				game_state = GameState::STANDBY;
+			}
 		}
 	}
-
+	else if (game_state == GameState::RESULT)
+	{
+		if (INPUT->KeyDown('R'))
+		{
+			PHYSICS->InitSpherePhysics(Vector3(0, 3.0f, 0));
+			game_state = GameState::STANDBY;
+			InitToGameStandby();
+		}
+	}
+	ui_ball_nav->SetWorldPosX(ball->GetWorldPos().x);
+	ui_ball_nav->SetWorldPosZ(ball->GetWorldPos().z);
 
 	//런타임에 객체는 반드시 업데이트 호출
 	skybox->Update();
@@ -229,10 +266,12 @@ void Scene1::Update()
 	arrow_dir->Update();
 	objects->Update();
 	ui_ball_nav->Update();
+	ui_minimap->Update();
 	ui_pannel_minimap->Update();
 	ui_pannel_hole_count->Update();
 	ui_pannel_power_gauge->Update();
 	ui_power_gauge->Update();
+	ui_clear_image->Update();
 	cam_minimap->Update();
 }
 
@@ -257,7 +296,6 @@ void Scene1::Render()
 	player->Render();
 	ball->Render();
 	terrain->Render();
-	objects->Render();
 	ui_pannel_minimap->Render();
 	ui_pannel_hole_count->Render();
 	if (game_state == GameState::CONTROL) {
@@ -265,13 +303,15 @@ void Scene1::Render()
 		ui_pannel_power_gauge->Render();
 		ui_power_gauge->Render();
 	}
+	if (game_state == GameState::RESULT)
+		ui_clear_image->Render();
 	Camera::main = cam_minimap;
 	Camera::main->Set();
 	LIGHT->Set();       //라이트세팅
-	skybox->Render();
-	ball->Render();
-	terrain->Render();
-	objects->Render();
+	//skybox->Render();
+	//ball->Render();
+	//terrain->Render();
+	ui_minimap->Render();
 	ui_ball_nav->Render();
 
 	RECT rect;
@@ -290,11 +330,15 @@ void Scene1::ResizeScreen()
 	Camera::main->width = App.GetWidth();
 	Camera::main->height = App.GetHeight();
 
-	cam_minimap->viewport.x = origin_cam_minimap_size.x / 1280 * App.GetWidth();
-	cam_minimap->viewport.y = origin_cam_minimap_size.y / 720 * App.GetHeight();
-	cam_minimap->viewport.width = origin_cam_minimap_size.z / 1280 * App.GetWidth();
-	cam_minimap->viewport.height = origin_cam_minimap_size.w / 720 * App.GetHeight();
+	//cam_minimap->viewport.x = origin_cam_minimap_size.x / 1280 * App.GetWidth();
+	//cam_minimap->viewport.y = origin_cam_minimap_size.y / 720 * App.GetHeight();
+	//cam_minimap->viewport.width = origin_cam_minimap_size.z / 1280 * App.GetWidth();
+	//cam_minimap->viewport.height = origin_cam_minimap_size.w / 720 * App.GetHeight();
 	
+//	ui_pannel_minimap->SetWorldPosX(origin_ui_minimap_size.x / 1280 * App.GetWidth());
+//	ui_pannel_minimap->SetWorldPosY(origin_ui_minimap_size.y / 720 * App.GetHeight());
+//	ui_pannel_minimap->scale.x = (origin_ui_minimap_size.z / 1280 * App.GetWidth());
+//	ui_pannel_minimap->scale.y = (origin_ui_minimap_size.w / 720 * App.GetHeight());
 }
 
 void Scene1::InitToGameStandby()
@@ -308,6 +352,20 @@ void Scene1::InitToGameStandby()
 	ball_velocity = 0;
 }
 
+void Scene1::ViewCollider(bool isActive)
+{
+	ball->collider->visible = isActive;
+	for (auto& pair : terrain->children)
+	{
+		pair.second;
+
+		if (pair.second->collider) {
+			pair.second->collider->visible = isActive;
+		}
+	}
+}
+
 void Scene1::GameClear()
 {
+	game_state = GameState::RESULT;
 }

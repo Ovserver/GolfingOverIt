@@ -7,7 +7,7 @@
 #define AbsSum(a,b) (abs(a) + abs(b))
 enum class GameState
 {
-	STANDBY, CONTROL, ANIMTIME, RESULT
+	INIT, STANDBY, CONTROL, ANIMTIME, RESULT
 };
 class Scene1 : public Scene
 {
@@ -25,7 +25,11 @@ public:
 	virtual void ResizeScreen() override;
 private:
 	void InitToGameStandby();
+	void ViewCollider(bool isActive);
 	void GameClear();
+
+	bool view_collider = false;
+
 	int stats_hole = 0;
 	
 	float player_horizontal_power = 0;
@@ -33,6 +37,8 @@ private:
 	float ball_velocity = 0.0f;
 
 	XMFLOAT4 origin_cam_minimap_size;
+	XMFLOAT4 origin_ui_minimap_size;
+	XMFLOAT4 origin_ui_hole_count_size;
 
 	GameState game_state;
 	Vector3 pos_player_init;
@@ -48,10 +54,12 @@ private:
 	Actor* arrow_dir;
 	Actor* objects;
 	Actor* ui_ball_nav;
+	Actor* ui_minimap;
 	UI* ui_pannel_minimap;
 	UI* ui_pannel_hole_count;
 	UI* ui_pannel_power_gauge;
 	UI* ui_power_gauge;
+	UI* ui_clear_image;
 	UI* test_gauge_h;
 	UI* test_gauge_v;
 };

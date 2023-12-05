@@ -1,12 +1,12 @@
 <Root Name="UI" Visible="true" ObType="4">
     <Mesh File="6.UI.mesh"/>
     <Shader File="6.UI.hlsl"/>
-    <Material File="UI_Pannel.mtl"/>
+    <Material File="UI_clear_image.mtl"/>
     <Transform>
-        <Position X="-0.87800002" Y="0.25" Z="0"/>
-        <Scale X="0.14300001" Y="0.57800001" Z="1"/>
+        <Position X="0" Y="0" Z="0"/>
+        <Scale X="0.5" Y="0.69999999" Z="0.80000001"/>
         <Rotation X="0" Y="0" Z="0"/>
     </Transform>
-    <UI PivotX="1" PivotY="-1"/>
+    <UI PivotX="0" PivotY="0"/>
     <Children Size="0"/>
 </Root>

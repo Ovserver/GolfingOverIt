@@ -3,9 +3,9 @@
     <Shader File="6.Cube.hlsl"/>
     <Material File="body.mtl"/>
     <Transform>
-        <Position X="-73.550003" Y="4.6500001" Z="-14.4"/>
+        <Position X="-4.8499999" Y="4" Z="-0.25"/>
         <Scale X="1" Y="1.5" Z="0.60000002"/>
-        <Rotation X="0" Y="0" Z="0"/>
+        <Rotation X="0" Y="-4.3414831" Z="0"/>
     </Transform>
     <Children Size="5"/>
     <Child0 Name="Head" Visible="true" ObType="1">
